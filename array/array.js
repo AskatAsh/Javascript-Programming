@@ -9,3 +9,6 @@ console.log(typeof(num));
 console.log(num.indexOf(50));
 
 console.log(num.length);
+
+num[9] = 99;
+console.log(num);
