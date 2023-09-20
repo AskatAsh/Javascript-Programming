@@ -12,3 +12,6 @@ console.log(num.length);
 
 num[9] = 99;
 console.log(num);
+
+var type = Array.isArray(num);
+console.log(type);
