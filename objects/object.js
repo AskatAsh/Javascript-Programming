@@ -16,3 +16,6 @@ console.log(properties);
 var propertyValues = Object.values(student);
 console.log(propertyValues);
 console.log(student['id']);
+var studentName = 'name';
+var nameValue = student[studentName];
+console.log(nameValue);
