@@ -19,3 +19,9 @@ for(var i=0; i<keys.length; i++){
     var propertyValue = shoppingCart[propertyName];
     console.log(propertyName, propertyValue);
 }
+
+// for in loop
+for(propertyName in shoppingCart){
+    var val = shoppingCart[propertyName];
+    console.log(propertyName, val);
+}
