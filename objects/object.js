@@ -11,3 +11,5 @@ var student = {
 
 var result = student.marks;
 console.log(result);
+var properties = Object.keys(student);
+console.log(properties);
