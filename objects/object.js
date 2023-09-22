@@ -9,6 +9,7 @@ var student = {
 // student.class = 10;
 // console.log(student);
 
+// get object properties
 var result = student.marks;
 console.log(result);
 var properties = Object.keys(student);
@@ -19,3 +20,13 @@ console.log(student['id']);
 var studentName = 'name';
 var nameValue = student[studentName];
 console.log(nameValue);
+
+// set object properties
+student.name = "M.A.Askat";
+
+student['id'] = 4567;
+
+var grade = 'marks';
+student[grade] = 94;
+
+console.log(student);
