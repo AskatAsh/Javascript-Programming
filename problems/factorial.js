@@ -13,9 +13,10 @@ function factoUsingFor(num){
 function factoUsingWhile(num){
     let facto = 1;
     let i=1;
-    while(i<=num){
-        facto = facto * i;
-        i++;
+    while(num){
+        facto = facto * num;
+        num--;
+        // i++;
     }
     return facto;
 }
