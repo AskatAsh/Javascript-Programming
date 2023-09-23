@@ -16,11 +16,22 @@ function factoUsingWhile(num){
     while(num){
         facto = facto * num;
         num--;
-        // i++;
     }
     return facto;
 }
 
+// let myNumber = 4;
+// let factorial = factoUsingWhile(myNumber);
+// console.log(factorial);
+
+function factoWithoutLoop(num){
+
+    if(num===1){
+        return 1;
+    }
+    return num = num*factoWithoutLoop(num-1);
+}
+
 let myNumber = 4;
-let factorial = factoUsingWhile(myNumber);
+let factorial = factoWithoutLoop(myNumber);
 console.log(factorial);
