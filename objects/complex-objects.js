@@ -24,4 +24,7 @@ const myMusic = [
 //   console.log(myMusic);
 //   console.log(myMusic[0]);
 //   console.log(myMusic[0].formats);
-  console.log(myMusic[0].formats[1]);
+//   console.log(myMusic[0].formats[1]);
+
+  console.log(Object.keys(myMusic[0]));
+  console.log(Object.values(myMusic[0]));
