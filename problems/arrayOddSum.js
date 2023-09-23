@@ -6,9 +6,9 @@ function arrayOddSum(arr){
             console.log(i,arr[i],sum);
         }
     }
-    // return sum;
+    return sum;
 }
 let myArray = [15, 22, 33, 15, 29, 10, 17];
-arrayOddSum(myArray);
-// let result = arrayOddSum(myArray);
-// console.log(result);
+
+let result = arrayOddSum(myArray);
+console.log("odd sum of the array: "+result);
