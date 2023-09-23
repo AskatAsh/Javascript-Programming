@@ -4,4 +4,5 @@ function inchToFeet(inch) {
     return feet.toFixed(5);
 }
 var inchValue = 1;
-console.log(inchToFeet(inchValue));
+result = parseFloat(inchToFeet(inchValue));
+console.log(result);
