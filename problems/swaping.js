@@ -23,3 +23,17 @@ function swapingAgain(first, second){
 }
 
 swapingAgain(89, 46);
+
+function swaping3rdTime(x, y){
+    let beforeSwap = "before swap: x y = ";
+    console.log(beforeSwap, x, y);
+
+    x = x+y;
+    y = x-y;
+    x = x-y;
+
+    let afterSwap = "before swap: x y = ";
+    console.log(afterSwap, x, y);
+}
+
+swaping3rdTime(10, 15);
