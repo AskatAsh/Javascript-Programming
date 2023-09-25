@@ -15,3 +15,12 @@ function power(num1, num2){
 // let powOfNum = power(4, 2);
 let powOfNum = power(2, -2);
 console.log(powOfNum);
+
+function round(num){
+    let result = Math.round(num);
+    return result;
+}
+
+// let roundOfNum = round(23.454221);
+let roundOfNum = round(73.5991);
+console.log(roundOfNum);
