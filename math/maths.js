@@ -24,3 +24,14 @@ function round(num){
 // let roundOfNum = round(23.454221);
 let roundOfNum = round(73.5991);
 console.log(roundOfNum);
+
+function foorAndCeil(num){
+    let afterFloored = Math.floor(num);
+    let afterCeiled = Math.ceil(num);
+
+    let result = "floor of "+num+" is: "+ afterFloored +"\n"+"ceil of "+num+" is: "+ afterCeiled;
+    return result;
+}
+
+let myNum = foorAndCeil(56.73927);
+console.log(myNum);
