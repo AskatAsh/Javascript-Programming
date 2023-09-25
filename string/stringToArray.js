@@ -5,8 +5,13 @@ function stringToArray(str){
         arr.push(str[i]);
     }
     for(let i=0;i<arr.length;i++){
+        // if(arr[i] === ' '){
+        //     arr[i] = '_';
+        // }
+
         if(arr[i] === ' '){
-            arr[i] = '_';
+            let deleted = arr.splice(i,1);
+            console.log(deleted);
         }
     }
     return arr;
