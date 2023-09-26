@@ -1,9 +1,12 @@
 function wordReverse(str){
     let words = str.split(' ');
-    let reversed = '';
+    let reversedArray = [];
+    // let reversed = '';
     for(let i=words.length-1; i>=0; i--){
-        reversed += words[i]+' ';
+        // reversed += words[i]+' ';
+        reversedArray.push(words[i]);
     }
+    let reversed = reversedArray.join(' ');
     return reversed;
 }
 
