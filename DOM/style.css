@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, p, ul{
+    color: #4b4b4b;
+    margin: 0.5rem;
+}
+ul li{
+    color: #4e9b6d;
+}
+img{
+    max-width: 50rem;
+    margin: 0.5rem;
+}
