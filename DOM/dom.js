@@ -43,3 +43,15 @@ console.log(favFruit.innerText);
 document.getElementById('header').style.backgroundColor = 'lightgreen'
 document.getElementById('header').style.color = 'darkgreen'
 document.getElementById('header').style.textAlign = 'center'
+
+// let title = document.getElementById('para')
+
+// title.getAttribute('class')
+
+// title.classList
+// title.classList.add('font-normal')
+
+// title.classList
+// title.classList.remove('boxed')
+
+// title.classList
