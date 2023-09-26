@@ -18,3 +18,14 @@ let classList = document.getElementsByClassName('lists');
 for (const list of classList){
     console.log(list.innerText);
 }
+
+let para = document.getElementById('para');
+console.log(para);
+// console.log(para.textContent);
+console.log(para.innerText);
+
+let myList = document.getElementsByClassName('list');
+for(const items of myList){
+    // console.log(items);
+    console.log(items.innerText);
+}
