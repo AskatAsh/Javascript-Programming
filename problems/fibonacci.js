@@ -19,4 +19,14 @@ function fibonacci(num) {
     return result;
 }
 
-console.log(fibonacci(6));
+// console.log(fibonacci(5));
+
+function fiboShort(num){
+    let fibo = [0, 1];
+    for(let i=2; i<num; i++){
+        fibo[i] = fibo[i-1] + fibo[i-2];
+    }
+    return fibo;
+}
+
+console.log(fiboShort(5));
