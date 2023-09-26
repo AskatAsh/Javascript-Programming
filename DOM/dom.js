@@ -63,3 +63,10 @@ document.getElementById('header').style.textAlign = 'center'
 
 // document.getElementsByClassName('fruits')[0]
 // document.getElementsByClassName('fruits')[0].innerHTML
+
+const myFruitList = document.getElementsByClassName('fruits')[0];
+const details = myFruitList.innerHTML;
+const detailedText = myFruitList.innerText
+console.log(details);
+console.log(detailedText);
+// console.log(myFruitList);
