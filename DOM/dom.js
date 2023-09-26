@@ -55,3 +55,11 @@ document.getElementById('header').style.textAlign = 'center'
 // title.classList.remove('boxed')
 
 // title.classList
+
+
+// title = document.querySelector('.fruits .fruit')
+// title.setAttribute('title', 'my favourite fruit')
+
+
+// document.getElementsByClassName('fruits')[0]
+// document.getElementsByClassName('fruits')[0].innerHTML
