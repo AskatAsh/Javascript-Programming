@@ -29,3 +29,13 @@ for(const items of myList){
     // console.log(items);
     console.log(items.innerText);
 }
+
+let myFruits = document.querySelectorAll('.fruits li');
+for(const myFruit of myFruits){
+    console.log(myFruit.innerText);
+}
+
+let favFruit = document.querySelector('.fruits .fruit');
+favFruit.innerText = 'Mango';
+console.log(favFruit);
+console.log(favFruit.innerText);
