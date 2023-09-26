@@ -39,3 +39,7 @@ let favFruit = document.querySelector('.fruits .fruit');
 favFruit.innerText = 'Mango';
 console.log(favFruit);
 console.log(favFruit.innerText);
+
+document.getElementById('header').style.backgroundColor = 'lightgreen'
+document.getElementById('header').style.color = 'darkgreen'
+document.getElementById('header').style.textAlign = 'center'
