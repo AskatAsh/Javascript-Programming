@@ -70,3 +70,23 @@ const detailedText = myFruitList.innerText
 console.log(details);
 console.log(detailedText);
 // console.log(myFruitList);
+
+const sections = document.querySelectorAll('section');
+for(const section of sections){
+    console.log(section);
+    section.style.border = '2px solid darkgray';
+    section.style.borderRadius = '10px';
+    section.style.margin = '5px 10px';
+    section.style.padding = '10px';
+    section.style.backgroundColor = 'lightyellow';
+    section.style.marginBottom = '15px'
+}
+
+const allLists = document.querySelectorAll('li');
+for(const list of allLists){
+    list.style.listStyle = 'none';
+}
+
+const listElements = document.getElementsByClassName('lists')[0];
+listElements.classList.add('dom-list');
+listElements.classList.remove('lists');
