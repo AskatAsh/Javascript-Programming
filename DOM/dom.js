@@ -108,3 +108,21 @@ console.log(thirdElementsChilds);
 
 const listSibling = document.getElementById('mylist').childNodes[3].childNodes[2].nextSibling;
 console.log(listSibling);
+
+const myUl = document.getElementById('myfruit').childNodes
+console.log(myUl);
+
+const ul = document.getElementById('myfruit').childNodes[3]
+console.log(ul);
+
+const ulChilds = ul.childNodes
+console.log(ulChilds);
+
+const ulThirdChild = ulChilds[5];
+console.log(ulThirdChild);
+
+const thirdChildsParent = ulThirdChild.parentElement;
+console.log(thirdChildsParent);
+
+const grandParent = thirdChildsParent.parentElement;
+console.log(grandParent);
