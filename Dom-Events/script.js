@@ -7,3 +7,9 @@ function makeLightGreen(){
 }
 
 const clickToChange = document.getElementById('makeLightGreen').onclick = makeLightGreen;
+
+const pinkButton = document.getElementById('makePink');
+// console.log(pinkButton);
+pinkButton.onclick = function makePink(){
+    document.body.style.backgroundColor = 'pink';
+}
