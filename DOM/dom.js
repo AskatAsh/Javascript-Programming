@@ -126,3 +126,12 @@ console.log(thirdChildsParent);
 
 const grandParent = thirdChildsParent.parentElement;
 console.log(grandParent);
+
+const newChild1 = document.createElement('li');
+console.log(newChild1);
+
+newChild1.innerText = 'Sugercane';
+
+// const addChild = thirdChildsParent.append(newChild1);
+const addChild = thirdChildsParent.appendChild(newChild1);
+newChild1.style.listStyleType = 'none';
