@@ -135,3 +135,17 @@ newChild1.innerText = 'Sugercane';
 // const addChild = thirdChildsParent.append(newChild1);
 const addChild = thirdChildsParent.appendChild(newChild1);
 newChild1.style.listStyleType = 'none';
+
+const dressSection = document.createElement('section');
+console.log(dressSection);
+
+dressSection.innerHTML = `
+    <h3>My favourite dress</h3>
+    <ul>
+        <li>T-shirt</li>
+        <li>Jeans pant</li>
+        <li>Loafer</li>
+    </ul>
+`
+const mainContainer = document.getElementById('main-container');
+mainContainer.appendChild(dressSection);
