@@ -90,3 +90,21 @@ for(const list of allLists){
 const listElements = document.getElementsByClassName('lists')[0];
 listElements.classList.add('dom-list');
 listElements.classList.remove('lists');
+
+const childContainer = document.getElementById('mylist').childNodes;
+console.log(childContainer);
+
+const firstElement = document.getElementById('mylist').firstChild;
+console.log(firstElement);
+
+const secondElement = document.getElementById('mylist').childNodes[1];
+console.log(secondElement);
+
+const thirdElement = document.getElementById('mylist').childNodes[3];
+console.log(thirdElement);
+
+const thirdElementsChilds = document.getElementById('mylist').childNodes[3].childNodes;
+console.log(thirdElementsChilds);
+
+const listSibling = document.getElementById('mylist').childNodes[3].childNodes[2].nextSibling;
+console.log(listSibling);
