@@ -133,7 +133,14 @@ submitButton.addEventListener('click', function(){
     // console.log(userComment.value);
     const comment = userComment.value;
 
+    const commentSection = document.getElementById('commentSection');
+    const para = document.createElement('p');
+    console.log(commentSection);
+
     const showComment = document.getElementById('showComment');
     // console.log(showComment);
-    showComment.innerText = comment;
+    // showComment.innerText = comment;
+    para.innerText = comment;
+
+    commentSection.appendChild(para);
 });
