@@ -10,3 +10,4 @@ console.log(afterSlice_1);
 console.log(afterSlice_2);
 console.log(afterSlice_3);
 console.log(afterSlice_4);
+console.log(myString.slice(0, myString.length-1));
