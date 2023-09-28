@@ -18,3 +18,13 @@ mouseMoveButton.addEventListener('mousemove', function(){
     mouseMoveButton.style.backgroundColor = 'lightblue';
     console.log("mouse Move change");
 });
+
+const focusField = document.getElementById('inputField');
+// console.log(focusField);
+focusField.addEventListener('focus', function(){
+    console.log('you have triggered the focus event');
+});
+
+focusField.addEventListener('blur', function(){
+    console.log('you have triggered the blur event');
+});
