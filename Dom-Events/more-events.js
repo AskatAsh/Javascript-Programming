@@ -50,3 +50,23 @@ keyPress.addEventListener('keypress', function(event){
     // console.log(event.target.value);
     keyPressText.innerText = event.target.value;
 });
+
+// write delete to delete a text
+
+const deleteBtn = document.getElementById('deleteButton');
+deleteBtn.addEventListener('click', function(){
+    const textToDelete = document.getElementById('deleteText');
+    textToDelete.style.display = 'none';
+})
+
+const textField = document.getElementById('deleteField');
+textField.addEventListener('keyup',function(event){
+    const text = event.target.value;
+    console.log(text);
+    if(text === 'delete'){
+        deleteBtn.removeAttribute('disabled');
+    }
+    else{
+        deleteBtn.setAttribute('disabled', true);
+    }
+})
