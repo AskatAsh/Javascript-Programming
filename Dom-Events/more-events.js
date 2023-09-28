@@ -36,3 +36,17 @@ keyUp.addEventListener('keyup', function(event){
     // console.log(event.target.value);
     keyUpText.innerText = event.target.value;
 });
+
+const keyDown = document.getElementById('keydownField');
+keyDown.addEventListener('keydown', function(event){
+    const keyDownText = document.getElementById('afterKeyDown');
+    // console.log(event.target.value);
+    keyDownText.innerText = event.target.value;
+});
+
+const keyPress = document.getElementById('keypressField');
+keyPress.addEventListener('keypress', function(event){
+    const keyPressText = document.getElementById('afterKeyPress');
+    // console.log(event.target.value);
+    keyPressText.innerText = event.target.value;
+});
