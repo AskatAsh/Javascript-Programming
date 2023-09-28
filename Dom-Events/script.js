@@ -99,3 +99,28 @@ function close() {
 seeDetail.addEventListener('click', styleDetails);
 
 closeButton.addEventListener('click', close);
+
+
+// login form
+// const userEmail = document.getElementById('userEmail');
+// console.log(userEmail.value);
+
+const loginBtn = document.getElementById('loginButton');
+loginBtn.addEventListener('click', function(){
+    const userEmail = document.getElementById('userEmail');
+    // console.log(userEmail.value);
+    const getEmail = userEmail.value;
+
+    const showEmail = document.getElementById('email');
+    showEmail.innerText = getEmail;
+    // console.log('got the connection');
+
+    const userPassword = document.getElementById('userPassword');
+    // console.log(userPassword);
+    const getPassword = userPassword.value;
+
+    const showPassword = document.getElementById('password');
+    // console.log(showPassword.innerText);
+    showPassword.innerText = showPassword;
+
+});
