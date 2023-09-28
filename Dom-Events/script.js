@@ -124,3 +124,5 @@ loginBtn.addEventListener('click', function(){
     showPassword.innerText = showPassword;
 
 });
+
+// add comment section
