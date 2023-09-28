@@ -28,3 +28,11 @@ focusField.addEventListener('focus', function(){
 focusField.addEventListener('blur', function(){
     console.log('you have triggered the blur event');
 });
+
+
+const keyUp = document.getElementById('keyupField');
+keyUp.addEventListener('keyup', function(event){
+    const keyUpText = document.getElementById('afterKeyUp');
+    // console.log(event.target.value);
+    keyUpText.innerText = event.target.value;
+});
