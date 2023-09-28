@@ -126,3 +126,14 @@ loginBtn.addEventListener('click', function(){
 });
 
 // add comment section
+const submitButton = document.getElementById('submit');
+// console.log(submit);
+submitButton.addEventListener('click', function(){
+    const userComment = document.getElementById('userComment');
+    // console.log(userComment.value);
+    const comment = userComment.value;
+
+    const showComment = document.getElementById('showComment');
+    // console.log(showComment);
+    showComment.innerText = comment;
+});
