@@ -13,6 +13,7 @@ const depositButton = document.getElementById('depositButton');
 const withdrawButton = document.getElementById('withdrawButton');
 // console.log(depositButton);
 
+// function to deposit
 depositButton.addEventListener('click', function () {
     const depositInput = document.getElementById('depositInput');
     // console.log(depositInput.value);
@@ -31,6 +32,7 @@ depositButton.addEventListener('click', function () {
 
 });
 
+// function to withdraw
 withdrawButton.addEventListener('click', function () {
     const withdrawInput = document.getElementById('withdrawInput');
     // console.log(depositInput.value);
@@ -41,10 +43,18 @@ withdrawButton.addEventListener('click', function () {
     // const toInt = parseInt(depositvalue);
     // console.log(typeof(depositvalue));
 
-    withdraw.innerText = withdrawValue + inputValue;
+    // withdraw.innerText = withdrawValue + inputValue;
 
     const newBalance = parseInt(balance.innerText);
     // console.log(newBalance);
-    balance.innerText = newBalance - inputValue;
+    // balance.innerText = newBalance - inputValue;
+
+    if(newBalance<=0 || newBalance<inputValue){
+        alert('Sorry! You don\'t have enough balance to withdraw');
+    }
+    else{
+        withdraw.innerText = withdrawValue + inputValue;
+        balance.innerText = newBalance - inputValue;
+    }
 
 });
