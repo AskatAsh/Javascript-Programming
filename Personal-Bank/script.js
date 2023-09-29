@@ -6,6 +6,13 @@ loginBtn.addEventListener('click', function(event){
     const email = userEmail.value;
 
     const userPassword = document.getElementById('userPassword');
-    console.log(userPassword.value);
-    // const password = userPassword.value;
+    // console.log(userPassword.value);
+    const password = userPassword.value;
+
+    if(email === 'ash98@gmail.com' && password === 'forgotten'){
+        console.log('Valid User');
+    }
+    else{
+        console.log('Invalid Email or Password');
+    }
 });
