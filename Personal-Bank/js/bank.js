@@ -10,20 +10,41 @@ const balance = document.getElementById('balance');
 const depositButton = document.getElementById('depositButton');
 // console.log(depositButton);
 
+const withdrawButton = document.getElementById('withdrawButton');
+// console.log(depositButton);
+
 depositButton.addEventListener('click', function () {
     const depositInput = document.getElementById('depositInput');
     // console.log(depositInput.value);
     const inputValue = parseInt(depositInput.value);
     // console.log(typeof(inputValue));
 
-    const depositvalue = parseInt(deposit.innerText);
+    const depositValue = parseInt(deposit.innerText);
     // const toInt = parseInt(depositvalue);
     // console.log(typeof(depositvalue));
 
-    deposit.innerText = depositvalue + inputValue;
+    deposit.innerText = depositValue + inputValue;
 
     const newBalance = parseInt(balance.innerText);
     // console.log(newBalance);
     balance.innerText = newBalance + inputValue;
+
+});
+
+withdrawButton.addEventListener('click', function () {
+    const withdrawInput = document.getElementById('withdrawInput');
+    // console.log(depositInput.value);
+    const inputValue = parseInt(withdrawInput.value);
+    // console.log(typeof(inputValue));
+
+    const withdrawValue = parseInt(withdraw.innerText);
+    // const toInt = parseInt(depositvalue);
+    // console.log(typeof(depositvalue));
+
+    withdraw.innerText = withdrawValue + inputValue;
+
+    const newBalance = parseInt(balance.innerText);
+    // console.log(newBalance);
+    balance.innerText = newBalance - inputValue;
 
 });
