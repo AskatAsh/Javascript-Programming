@@ -23,19 +23,24 @@
 
     <!-- javascript event handler -->
     <script>
-        const items = document.getElementsByClassName('item');
-        // console.log(items);
-        for(const item of items){
-            // console.log(item);
-            // item.addEventListener('click', function(){
-            //     console.log(item);
-            // });
-            item.addEventListener('click', function(event){
-                // console.log(event.target);
-                // console.log(event.target.parentNode);
-                event.target.parentNode.removeChild(event.target);
-            });
-        } 
+        // const items = document.getElementsByClassName('item');
+        // // console.log(items);
+        // for(const item of items){
+        //     // console.log(item);
+        //     // item.addEventListener('click', function(){
+        //     //     console.log(item);
+        //     // });
+        //     item.addEventListener('click', function(event){
+        //         // console.log(event.target);
+        //         // console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target);
+        //     });
+        // } 
+
+        document.getElementById('list').addEventListener('click', function(event){
+            // console.log(event.target);
+            event.target.parentNode.removeChild(event.target);
+        });
 
         document.getElementById('addItem').addEventListener('click', function(){
             const parentList = document.getElementById('list');
