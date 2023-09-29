@@ -10,9 +10,12 @@ loginBtn.addEventListener('click', function(event){
     const password = userPassword.value;
 
     if(email === 'ash98@gmail.com' && password === 'forgotten'){
-        console.log('Valid User');
+        alert('Welcome to Your Personal Bank');
     }
     else{
-        console.log('Invalid Email or Password');
+        const invalid = document.getElementById('invalid');
+        // console.log(invalid);
+        invalid.innerText = 'The email or password you have given is incorrect!';
+
     }
 });
