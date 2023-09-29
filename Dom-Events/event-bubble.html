@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS event bubble</title>
+</head>
+<style>
+    #item-2{
+        padding: 10px;
+        background-color: lightcoral;
+    }
+    #myList{
+        background-color: lightgoldenrodyellow;
+    }
+    #listContainer{
+        padding: 50px;
+        background-color: lightblue;
+    }
+    body{
+        /* background-color: lightgoldenrodyellow; */
+        border: 20px solid lightsalmon;
+    }
+</style>
+<body id="theBody">
+    <h1>Exploring Js Event Bubble</h1>
+
+    <section id="listContainer">
+        <ul id="myList">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Doloribus, quam!</li>
+            <li id="item-3">Voluptates, provident!</li>
+            <li id="item-4">Saepe, error.</li>
+            <li id="item-5">Nisi, incidunt!</li>
+            <li id="item-6">Temporibus, nobis?</li>
+        </ul>
+    </section>
+
+
+    <!-- link to even-bubble.js file -->
+    <script src="./event-bubble.js"></script>
+</body>
+</html>
