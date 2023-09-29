@@ -4,4 +4,8 @@ loginBtn.addEventListener('click', function(event){
     const userEmail = document.getElementById('userEmail');
     // console.log(userEmail.value);
     const email = userEmail.value;
+
+    const userPassword = document.getElementById('userPassword');
+    console.log(userPassword.value);
+    // const password = userPassword.value;
 });
