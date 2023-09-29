@@ -23,12 +23,27 @@ depositButton.addEventListener('click', function () {
     const depositValue = parseInt(deposit.innerText);
     // const toInt = parseInt(depositvalue);
     // console.log(typeof(depositvalue));
+    // console.log(String(3).padStart(2, '0'));
 
-    deposit.innerText = depositValue + inputValue;
+    if (isNaN(inputValue)) {
+        alert('Please enter the amount to deposit!');
+    }
+    else {
+        if(deposit.innerText <= 8){
+            // console.log('less is more');
+            const total = depositValue + inputValue;
+            // deposit.innerText ='0'+ total;
+            deposit.innerText = String(total).padStart(2, '0');
+        }
+        else{
+            deposit.innerText = depositValue + inputValue;
+        }
 
-    const newBalance = parseInt(balance.innerText);
-    // console.log(newBalance);
-    balance.innerText = newBalance + inputValue;
+        const newBalance = parseInt(balance.innerText);
+        // console.log(newBalance);
+        balance.innerText = newBalance + inputValue;
+    }
+    
 
 });
 
@@ -49,10 +64,10 @@ withdrawButton.addEventListener('click', function () {
     // console.log(newBalance);
     // balance.innerText = newBalance - inputValue;
 
-    if(newBalance<=0 || newBalance<inputValue){
+    if (newBalance <= 0 || newBalance < inputValue) {
         alert('Sorry! You don\'t have enough balance to withdraw');
     }
-    else{
+    else {
         withdraw.innerText = withdrawValue + inputValue;
         balance.innerText = newBalance - inputValue;
     }
