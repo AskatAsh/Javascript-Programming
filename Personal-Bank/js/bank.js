@@ -17,10 +17,10 @@ const withdrawButton = document.getElementById('withdrawButton');
 depositButton.addEventListener('click', function () {
     const depositInput = document.getElementById('depositInput');
     // console.log(depositInput.value);
-    const inputValue = parseInt(depositInput.value);
+    const inputValue = parseFloat(depositInput.value);
     // console.log(typeof(inputValue));
 
-    const depositValue = parseInt(deposit.innerText);
+    const depositValue = parseFloat(deposit.innerText);
     // const toInt = parseInt(depositvalue);
     // console.log(typeof(depositvalue));
     // console.log(String(3).padStart(2, '0'));
@@ -39,7 +39,7 @@ depositButton.addEventListener('click', function () {
             deposit.innerText = depositValue + inputValue;
         }
 
-        const newBalance = parseInt(balance.innerText);
+        const newBalance = parseFloat(balance.innerText);
         // console.log(newBalance);
         balance.innerText = newBalance + inputValue;
     }
@@ -51,16 +51,16 @@ depositButton.addEventListener('click', function () {
 withdrawButton.addEventListener('click', function () {
     const withdrawInput = document.getElementById('withdrawInput');
     // console.log(depositInput.value);
-    const inputValue = parseInt(withdrawInput.value);
+    const inputValue = parseFloat(withdrawInput.value);
     // console.log(typeof(inputValue));
 
-    const withdrawValue = parseInt(withdraw.innerText);
+    const withdrawValue = parseFloat(withdraw.innerText);
     // const toInt = parseInt(depositvalue);
     // console.log(typeof(depositvalue));
 
     // withdraw.innerText = withdrawValue + inputValue;
 
-    const newBalance = parseInt(balance.innerText);
+    const newBalance = parseFloat(balance.innerText);
     // console.log(newBalance);
     // balance.innerText = newBalance - inputValue;
 
