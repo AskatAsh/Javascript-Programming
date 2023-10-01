@@ -5,4 +5,5 @@ const value = prompt('Write the value you want to set');
 localStorage.setItem(key, value);
 
 // set key and value from local storage
-localStorage.getItem(key)
+// localStorage.getItem(key)
+console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
