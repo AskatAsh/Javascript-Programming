@@ -7,3 +7,7 @@ localStorage.setItem(key, value);
 // set key and value from local storage
 // localStorage.getItem(key)
 console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
+
+if(key == null || key == 'height'){
+    localStorage.removeItem(key);
+}
