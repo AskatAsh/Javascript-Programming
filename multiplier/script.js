@@ -11,3 +11,7 @@ console.log(`The value at ${key} is ${localStorage.getItem(key)}`);
 if(key == null || key == 'height'){
     localStorage.removeItem(key);
 }
+
+if(key == 0){
+    localStorage.clear();
+}
