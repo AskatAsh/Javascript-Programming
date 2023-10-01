@@ -15,3 +15,6 @@ if(key == null || key == 'height'){
 if(key == 0){
     localStorage.clear();
 }
+for(let i = 0; i<localStorage.length; i++){
+    console.log(`key at index ${i} is ${localStorage.key(i)}`);
+}
