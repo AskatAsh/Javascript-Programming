@@ -18,3 +18,10 @@ function totalDeposit() {
     const depositTotal = depositIn + depositOut;
     return depositTotal;
 }
+// calculate total withdraw
+function totalWithdraw() {
+    const withdrawIn = getInput('withdrawInput');
+    const withdrawOut = getOutput('withdraw');
+    const withdrawTotal = withdrawIn + withdrawOut;
+    return withdrawTotal;
+}
