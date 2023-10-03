@@ -25,3 +25,16 @@ function totalWithdraw() {
     const withdrawTotal = withdrawIn + withdrawOut;
     return withdrawTotal;
 }
+// calculate balance after deposit of withdraw
+function totalBalance(dOrw){
+    const balance = document.getElementById('balance');
+    const balanceOutput = parseFloat(balance.innerText);
+    if(dOrw === 'deposit'){
+        const totalBalance = balanceOutput + getInput('depositInput');
+        balance.innerText = totalBalance;
+    }
+    else{
+        const totalBalance = balanceOutput - getInput('withdrawInput');
+        balance.innerText = totalBalance;
+    }
+}
