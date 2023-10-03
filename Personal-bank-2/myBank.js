@@ -54,3 +54,22 @@ document.getElementById('depositButton').addEventListener('click', function () {
     }
 });
 
+// click event for withdraw
+document.getElementById('withdrawButton').addEventListener('click', function () {
+    const withdrawIn = getInput('withdrawInput');
+    const updateBalance = document.getElementById('balance').innerText;
+    if (isNaN(withdrawIn)) {
+        alert("Please, write the withdraw amount!");
+    }
+    else {
+        const withdraw = document.getElementById('withdraw');
+
+        if(updateBalance < withdrawIn || updateBalance == 0){
+            alert('You currently don\'t have enough balance!');
+        }
+        else{
+            withdraw.innerText = totalWithdraw();
+            totalBalance('withdraw');
+        }
+    }
+});
