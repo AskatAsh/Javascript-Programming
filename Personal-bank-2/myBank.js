@@ -38,3 +38,19 @@ function totalBalance(dOrw){
         balance.innerText = totalBalance;
     }
 }
+
+// click event for deposit
+document.getElementById('depositButton').addEventListener('click', function () {
+    const depositIn = getInput('depositInput');
+    if (isNaN(depositIn)) {
+        alert("Please, write the deposit amount!");
+    }
+    else {
+        const deposit = document.getElementById('deposit');
+        deposit.innerText = totalDeposit();
+
+        // update total balance
+        totalBalance('deposit');
+    }
+});
+
