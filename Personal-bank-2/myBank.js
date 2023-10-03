@@ -11,3 +11,10 @@ function getOutput(outputId) {
     const outputValue = parseFloat(output.innerText);
     return outputValue;
 }
+// calculate total deposit
+function totalDeposit() {
+    const depositIn = getInput('depositInput');
+    const depositOut = getOutput('deposit');
+    const depositTotal = depositIn + depositOut;
+    return depositTotal;
+}
