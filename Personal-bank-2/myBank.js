@@ -1,7 +1,7 @@
-// get deposit input value
-function getDeposit(inputId) {
-    const deposit = document.getElementById(inputId);
-    const depositValue = parseFloat(deposit.value);
-    return depositValue
+// get input value
+function getInput(inputId) {
+    const input = document.getElementById(inputId);
+    const inputValue = parseFloat(input.value);
+    return inputValue
 
 }
