@@ -5,3 +5,9 @@ function getInput(inputId) {
     return inputValue
 
 }
+// get output value
+function getOutput(outputId) {
+    const output = document.getElementById(outputId);
+    const outputValue = parseFloat(output.innerText);
+    return outputValue;
+}
