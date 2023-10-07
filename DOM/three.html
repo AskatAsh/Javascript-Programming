@@ -25,9 +25,20 @@
             const li = document.createElement('li');
             const addText = document.createTextNode(languageName);
             li.appendChild(addText);
-            document.querySelector('.language').appendChild(li);
+            document.querySelector('.language').appendChild(li); 
         }
         optimizedWay("typescript");
+
+        const thirdLanguage = document.querySelector('li:nth-child(3)');
+        const newlist = document.createElement('li');
+        newlist.textContent = "java";
+        thirdLanguage.replaceWith(newlist);
+
+        const fourthLanguage = document.querySelector('li:nth-child(4)');
+        fourthLanguage.outerHTML = '<li>EcmaScript</li>';
+
+        const secondLanguage = document.querySelector('li:nth-child(2)');
+        secondLanguage.remove();
     </script>
 </body>
 </html>
