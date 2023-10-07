@@ -23,5 +23,9 @@ buttons.forEach(function(button){
             // body.style.backgroundColor = 'lightgreen';
             body.style.backgroundColor = event.target.id;
         }
+        if(event.target.id === "white"){
+            // body.style.backgroundColor = 'lightgreen';
+            body.style.backgroundColor = event.target.id;
+        }
     })
 });
