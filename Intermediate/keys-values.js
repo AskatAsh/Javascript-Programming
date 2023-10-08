@@ -8,3 +8,6 @@ const laptop = {
 // console.log(Object.keys(laptop));
 const keys = Object.keys(laptop);
 console.log(keys);
+
+const values = Object.values(laptop);
+console.log(values);
