@@ -25,3 +25,10 @@ console.log(age);
 console.log(mobile);
 // console.log(balance);
 console.log(money);
+
+// array destructure
+const numbers = [10, 20];
+let [x, y] = numbers;
+[x, y] = [30, 40];
+console.log(x, y);
+
