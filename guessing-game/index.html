@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+    <style>
+        #container{
+            text-align: center;
+        }
+        .lowOrHigh{
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        label{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Guessing Game by Javascript</h1>
+        <p>Try to guess a random number between 1 and 100</p>
+        <p>You only have 10 attempts to guess the right number</p>
+
+    <form action="">
+        <label for="num">Guess the Number</label>
+        <input type="number" name="number" id="num">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="results">
+        <p>Previous Guesses: <span class="guesses"></span></p>
+        <p>Guesses Remaining: <span class="remaining"></span></p>
+        <p class="lowOrHigh"></p>
+    </div>
+</div>
+</body>
+</html>
