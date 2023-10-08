@@ -10,3 +10,6 @@ const thirdNum = (numbers) => numbers[2];
 const myArray = [12, 34, 45, 56, 67, 78];
 console.log(thirdNum(myArray));
 
+// no parameter in arrow function
+const getPI = () => Math.PI;
+console.log(getPI().toFixed(4));
