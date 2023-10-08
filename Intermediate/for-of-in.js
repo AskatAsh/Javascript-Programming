@@ -19,5 +19,12 @@ const laptop = {
 
 for(const key in laptop){
     const value = laptop[key];
+    // console.log(key, value);
+}
+
+const keys = Object.keys(laptop);
+
+for(const key of keys){
+    const value = laptop[key];
     console.log(key, value);
 }
