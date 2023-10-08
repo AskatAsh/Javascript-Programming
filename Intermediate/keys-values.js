@@ -13,4 +13,8 @@ const values = Object.values(laptop);
 // console.log(values);
 
 const pair = Object.entries(laptop);
-console.log(pair);
+// console.log(pair);
+
+delete laptop.isSecondHand;
+console.log(laptop);
+
