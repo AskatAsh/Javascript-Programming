@@ -13,3 +13,17 @@ console.log(thirdNum(myArray));
 // no parameter in arrow function
 const getPI = () => Math.PI;
 console.log(getPI().toFixed(4));
+
+// arrow function with return
+const calculate = (a, b, c) => {
+    const add = a+b+c;
+    const sub = add - (a-b-c);
+    const multi = a*b*c;
+    const div = multi / a;
+    return `
+    Add = ${add}
+    Sub = ${sub}
+    Multi = ${multi}
+    Div = ${div}`;
+}
+console.log(calculate(15, 23, 32));
