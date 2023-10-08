@@ -37,3 +37,7 @@ const multiply = (...nums) => {
     return [a*2, b*2, c*2];
 }
 // console.log(multiply(2, 5, 7));
+const [product1, product2, product3] = multiply(2, 5, 7);
+console.log(product1);
+console.log(product2);
+console.log(product3);
