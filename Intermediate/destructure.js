@@ -32,3 +32,8 @@ let [x, y] = numbers;
 [x, y] = [30, 40];
 console.log(x, y);
 
+const multiply = (...nums) => {
+    const [a, b, c] = [nums[0], nums[1], nums[2]];
+    return [a*2, b*2, c*2];
+}
+// console.log(multiply(2, 5, 7));
