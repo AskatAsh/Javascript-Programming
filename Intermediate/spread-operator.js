@@ -20,7 +20,7 @@ console.log("copy array = ", copyArray);
 // stop array referencing using spread operator
 
 const mySecondArray = [10, 20, 30, 40, 50, 60, 70];
-const secondCopy = [...mySecondArray];
-secondCopy.push(80);
+const secondCopy = [...mySecondArray, 80, 90];
+// secondCopy.push(80);
 console.log("original array = ", mySecondArray);
 console.log("copy array = ", secondCopy);
