@@ -22,7 +22,13 @@ const {isSecondHand, ...others} = laptop;
 // console.log(others);
 
 // freezed object cannot be modified or removed
-Object.freeze(laptop);
-laptop.source = "Hello World";
+// Object.freeze(laptop);
+// laptop.source = "Hello World";
+// delete laptop.price;
+// console.log(laptop);
+
+// freezed object can be modified if not removed
+ Object.seal(laptop);
+laptop.name = "Hello World";
 delete laptop.price;
 console.log(laptop);
