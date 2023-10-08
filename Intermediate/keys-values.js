@@ -19,4 +19,10 @@ const pair = Object.entries(laptop);
 // console.log(laptop);
 
 const {isSecondHand, ...others} = laptop;
-console.log(others);
+// console.log(others);
+
+// freezed object cannot be modified or removed
+Object.freeze(laptop);
+laptop.source = "Hello World";
+delete laptop.price;
+console.log(laptop);
