@@ -15,6 +15,8 @@ const values = Object.values(laptop);
 const pair = Object.entries(laptop);
 // console.log(pair);
 
-delete laptop.isSecondHand;
-console.log(laptop);
+// delete laptop.isSecondHand;
+// console.log(laptop);
 
+const {isSecondHand, ...others} = laptop;
+console.log(others);
