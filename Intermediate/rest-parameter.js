@@ -18,3 +18,10 @@ const sum = (...arr) => {
     return sum;
 }
 console.log(sum(10, 20, 30));
+
+// another example of rest parameter
+const asManyas = (...args) =>{
+    return `You have passed ${args.length} arguments`;
+}
+console.log(asManyas(1, 2, 3));
+console.log(asManyas("string", null, [1, 2, 3], { }));
