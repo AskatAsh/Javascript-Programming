@@ -10,4 +10,18 @@ const products = {
     ]
 }
 
-console.log(products.data[1].price);
+// console.log(products.data[1].price);
+
+const user = {
+    id: 245890,
+    name: "shariful",
+    address: {
+        street: {
+            first: "121 - dumur road",
+            second: "mia bari koloni",
+            third: "Stay at home"
+        }
+    }
+}
+
+console.log(user.address.street.second);
