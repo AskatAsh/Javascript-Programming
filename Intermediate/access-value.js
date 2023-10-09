@@ -23,5 +23,14 @@ const user = {
         }
     }
 }
+const user2 = {
+    id: 245890,
+    name: "shariful",
+    address: {
+        first: "chittagong",
+        second: "bangladesh"
+    }
+}
 
-console.log(user.address.street.second);
+console.log(user.address.street?.second);
+console.log(user2.address.street?.second);
