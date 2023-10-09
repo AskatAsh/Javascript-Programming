@@ -10,4 +10,7 @@ const result = arr1.map(doubleNum);
 // console.log(result);
 
 const output = arr1.map(doubleNum2);
-console.log(output);
+// console.log(output);
+
+const finalResult = arr1.map(n => n*2);
+console.log(finalResult);
