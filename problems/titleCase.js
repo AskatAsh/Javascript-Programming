@@ -3,11 +3,11 @@ function titleCase(str) {
 
     let result = '';
     for(let word of words){
-        const lowerCase = word.slice(1, word.length).toLowerCase();
-        result = result + word[0].toUpperCase() + lowerCase + ' ';
+        const lowerCase = word.slice(1).toLowerCase();
+        result += word[0].toUpperCase() + lowerCase + ' ';
     }
     // console.log(result);
-    return result;
+    return result.trim();
 }
 
 console.log(titleCase("i love coding"));
