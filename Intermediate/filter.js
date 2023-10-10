@@ -4,4 +4,9 @@ const result = numbers.filter(n => n > 50);
 // console.log(result);
 
 const evenNumbers = numbers.filter(n => n%2 === 0);
-console.log(evenNumbers);
+// console.log(evenNumbers);
+
+const friends = ['asif', 'rakib', 'shihab', 'rahim', 'hannan', 'babor', 'sumona'];
+
+const oddFriends = friends.filter(frnd => frnd.length%2 === 1);
+console.log(oddFriends);
