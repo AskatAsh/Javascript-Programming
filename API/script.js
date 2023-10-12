@@ -13,9 +13,13 @@ function loadData(){
 }
 
 function loadUserData(){
+    const ul = document.getElementById('usersList');
     fetch('https://jsonplaceholder.typicode.com/users')
         .then(res => res.json())
         .then(data => data.forEach(user => {
-            console.log(user.username)
+            // console.log(user.username)
+            const li = document.createElement('li');
+            li.innerHTML = user.username
+            ul.appendChild(li)
         }))
 }
