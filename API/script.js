@@ -34,8 +34,8 @@ function loadPostsData(){
             postBox.classList.add('post-box')
             postBox.innerHTML = `
                 <h3>Title: ${post.title}</h3>
-                <p><span>UserId: ${post.userId} </span> <span>Id: ${post.id}</span></p>
-                <p>Body: ${post.body}</p>
+                <p class="user-id"><span>UserId: ${post.userId} </span> <span>Id: ${post.id}</span></p>
+                <p class="text">Body: ${post.body}</p>
                 `
             div.appendChild(postBox)
         }))
