@@ -22,6 +22,13 @@
             justify-content: center;
             gap: 24px;
         }
+        #details-container > p{
+            color: #706F6F;
+        }
+        #details-container > p > span{
+            color: #403F3F;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -59,15 +66,25 @@
     <!-- modal dialog box showing phone details -->
     <!-- You can open the modal using ID.showModal() method -->
     <dialog id="my_modal_4" class="modal">
-        <div class="modal-box w-11/12 max-w-5xl">
-            <h3 class="font-bold text-lg">Hello!</h3>
-            <p class="py-4">Click the button below to close</p>
+        <div class="modal-box w-11/12 lg:w-[752px] text-[#403F3F]">
+
+            <div id="details-container" class="flex flex-col gap-3">
+                <div id="img" class="bg-[#0D6EFD0D] flex justify-center items-center w-full py-16 rounded-lg">
+                    <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-pro-max.jpg" alt="">
+                </div>
+                <h3 class="font-bold text-3xl pt-3">Iphone 13 Pro Max</h3>
+                <p class="text-xs py-3">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p class="text-base md:text-lg"><span>Storage :</span> 128GB/256GB/1TB Storage, No card slot</p>
+            </div>
+
+
             <div class="modal-action">
                 <form method="dialog">
                     <!-- if there is a button, it will close the modal -->
-                    <button class="btn">Close</button>
+                    <button class="bg-[#DC3545] text-white text-lg font-bold px-12 py-4 rounded-lg">Close</button>
                 </form>
             </div>
+            
         </div>
     </dialog>
 
