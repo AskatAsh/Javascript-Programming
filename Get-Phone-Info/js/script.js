@@ -11,7 +11,7 @@ const displayPhoneInfo = (phones) => {
     const mainContainer = document.getElementById('phones-wrapper');
     // console.log(phones);
     phones.forEach(phone => {
-        console.log(phone);
+        // console.log(phone);
         const phoneCard = document.createElement('div');
         phoneCard.setAttribute("id", "phone-card");
         phoneCard.innerHTML = `
@@ -32,10 +32,10 @@ const displayPhoneInfo = (phones) => {
 
 loadPhoneInfo();
 
-// // load phone info using fetch api
-// const loadPhoneInfo = () => {
-//     fetch('https://openapi.programming-hero.com/api/phones?search=iphone')
-//         .then(data => data.json())
-//         .then(json => console.log(json.data))
-// }
-// loadPhoneInfo();
+// load phone info using fetch api
+const loadPhoneDetails = () => {
+    fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089')
+        .then(data => data.json())
+        .then(json => console.log(json.data))
+}
+loadPhoneDetails();
