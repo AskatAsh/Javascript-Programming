@@ -18,7 +18,7 @@ const displayPhoneInfo = (phones) => {
                 <div class="p-6 border-2 rounded-lg flex flex-col items-center gap-5">
                 
                     <div id="img" class="bg-[#0D6EFD0D] flex justify-center items-center w-full py-10 rounded-lg">
-                        <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" alt="">
+                        <img src="${phone.image}" alt="">
                     </div>
                     <h3 class="text-2xl font-bold text-[#403F3F] text-center">${phone.phone_name}</h3>
                     <p class="text-base text-[#706F6F] text-center">There are many variations of passages of available, but the majority have suffered</p>
