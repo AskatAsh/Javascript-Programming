@@ -23,7 +23,7 @@ const displayPhoneInfo = (phones) => {
                     <h3 class="text-2xl font-bold text-[#403F3F] text-center">${phone.phone_name}</h3>
                     <p class="text-base text-[#706F6F] text-center">There are many variations of passages of available, but the majority have suffered</p>
                     <p class="text-[#403F3F] text-2xl font-bold text-center">$999</p>
-                    <a class="bg-[#0D6EFD] text-white rounded-lg px-5 py-2 font-semibold text-center">Show Details</a>
+                    <button class="btn capitalize bg-[#0D6EFD] text-white rounded-lg px-6 py-2 font-semibold text-base" onclick="my_modal_4.showModal()">Show Details</button>
     
                 </div>`
         mainContainer.appendChild(phoneCard);
