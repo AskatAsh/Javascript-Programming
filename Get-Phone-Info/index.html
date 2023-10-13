@@ -7,14 +7,45 @@
     <title>Get Phone Info</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- custom styles -->
+    <style>
+        #phones-wrapper{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 360px));
+            justify-content: center;
+            gap: 24px;
+        }
+    </style>
 </head>
 
-<body>
+<body style="font-family: 'Poppins', sans-serif;">
     <header>
 
     </header>
     <main>
+        <h2 class="text-4xl font-semibold text-center my-10">Search your phone</h2>
+        <div id="phones-wrapper" class="p-3">
 
+            <div class="phone-info p-6 border-2 rounded-lg flex flex-col items-center gap-5">
+
+                <div id="img" class="bg-[#0D6EFD0D] flex justify-center items-center w-full py-10 rounded-lg">
+                    <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-13-mini.jpg" alt="">
+                </div>
+                <h3 class="text-2xl font-bold text-[#403F3F] text-center">Iphone 13 Pro Max</h3>
+                <p class="text-base text-[#706F6F] text-center">There are many variations of passages of available, but the majority have suffered</p>
+                <p class="text-[#403F3F] text-2xl font-bold text-center">$999</p>
+                <a class="bg-[#0D6EFD] text-white rounded-lg px-5 py-2 font-semibold text-center">Show Details</a>
+
+            </div>
+
+        </div>
     </main>
     <footer>
 
