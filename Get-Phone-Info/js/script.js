@@ -7,8 +7,10 @@ const loadPhoneInfo = async () => {
 }
 loadPhoneInfo();
 
+
+const mainContainer = document.getElementById('phones-wrapper');
 const displayPhoneInfo = (phones) => {
-    const mainContainer = document.getElementById('phones-wrapper');
+    // const mainContainer = document.getElementById('phones-wrapper');
     // console.log(phones);
     phones.forEach(phone => {
         // console.log(phone);
@@ -30,7 +32,11 @@ const displayPhoneInfo = (phones) => {
     })
 }
 
-
+mainContainer.addEventListener('click', (event) => {
+    if(event.target && event.target.id === "details"){
+        showPhoneDetails();
+    }
+})
 // load phone info using fetch api
 // const loadPhoneDetails = () => {
 //     fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089')
