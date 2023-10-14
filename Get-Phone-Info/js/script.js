@@ -45,10 +45,26 @@ mainContainer.addEventListener('click', (event) => {
 // }
 // loadPhoneDetails();
 
-
+const modalDetails = document.getElementById('modal-details');
 const showPhoneDetails = async() => {
     const phoneDetails = await fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089');
     const details = await phoneDetails.json();
     const data = details.data;
     console.log(data);
+    const detailsContainer = document.getElementById('details-container');
+    detailsContainer.innerHTML = `
+                    <div id="img" class="bg-[#0D6EFD0D] flex justify-center items-center w-full py-16 rounded-lg">
+                        <img src="${data.image}" alt="">
+                    </div>
+                    <h3 class="font-bold text-3xl">${data.name}</h3>
+                    <p class="text-xs py-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <p class="text-base md:text-lg"><span>Storage :</span> ${data.mainFeatures.storage}</p>
+                    <p class="text-base md:text-lg"><span>Display Size :</span> ${data.mainFeatures.displaySize}</p>    
+                    <p class="text-base md:text-lg"><span>Chipset :</span> ${data.mainFeatures.chipSet}</p>    
+                    <p class="text-base md:text-lg"><span>Memory :</span> ${data.mainFeatures.memory}</p>    
+                    <p class="text-base md:text-lg"><span>Slug :</span> ${data.slug}</p>    
+                    <p class="text-base md:text-lg"><span>Release data :</span> ${data.releaseDate}</p>    
+                    <p class="text-base md:text-lg"><span>Brand :</span> ${data.brand}</p>    
+                    <p class="text-base md:text-lg"><span>GPS :</span> ${data.others.GPS}</p>`
+    modalDetails.appendChild(detailsContainer);
 }
