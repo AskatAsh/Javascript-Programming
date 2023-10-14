@@ -32,14 +32,15 @@ const displayPhoneInfo = (phones) => {
 }
 
 const showDetails = (id) => {
-    console.log(id);
+    // console.log(id);
+    showPhoneDetails(id);
 }
 
-mainContainer.addEventListener('click', (event) => {
-    if(event.target && event.target.id === "details"){
-        showPhoneDetails();
-    }
-})
+// mainContainer.addEventListener('click', (event) => {
+//     if(event.target && event.target.id === "details"){
+//         showPhoneDetails();
+//     }
+// })
 // load phone info using fetch api
 // const loadPhoneDetails = () => {
 //     fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089')
@@ -49,8 +50,8 @@ mainContainer.addEventListener('click', (event) => {
 // loadPhoneDetails();
 
 const modalDetails = document.getElementById('modal-details');
-const showPhoneDetails = async() => {   
-    const phoneDetails = await fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089');
+const showPhoneDetails = async(id) => {   
+    const phoneDetails = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
     const details = await phoneDetails.json();
     const data = details.data;
     // console.log(data);
