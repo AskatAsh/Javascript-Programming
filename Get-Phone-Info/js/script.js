@@ -1,9 +1,10 @@
 const loadPhoneInfo = async () => {
-    const phoneData = await fetch('https://openapi.programming-hero.com/api/phones?search=iphone');
+    const phoneData = await fetch('https://openapi.programming-hero.com/api/phones?search=oppo');
     const phoneInfo = await phoneData.json();
     // console.log(phoneInfo.data);
     const phones = phoneInfo.data;
     displayPhoneInfo(phones);
+    showPhoneDetails(phones);
 }
 loadPhoneInfo();
 
@@ -46,8 +47,10 @@ mainContainer.addEventListener('click', (event) => {
 // loadPhoneDetails();
 
 const modalDetails = document.getElementById('modal-details');
-const showPhoneDetails = async() => {
-    const phoneDetails = await fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089');
+const showPhoneDetails = async(phones) => {
+    // console.log(phones[1].slug);
+    const phoneId = phones[1].slug;
+    const phoneDetails = await fetch(`https://openapi.programming-hero.com/api/phone/${phoneId}`);
     const details = await phoneDetails.json();
     const data = details.data;
     console.log(data);
