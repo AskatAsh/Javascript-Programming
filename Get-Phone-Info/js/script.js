@@ -49,5 +49,6 @@ mainContainer.addEventListener('click', (event) => {
 const showPhoneDetails = async() => {
     const phoneDetails = await fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089');
     const details = await phoneDetails.json();
-    console.log(details.data.mainFeatures.chipSet);
+    const data = details.data;
+    console.log(data);
 }
