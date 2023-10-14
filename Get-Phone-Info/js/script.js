@@ -4,7 +4,6 @@ const loadPhoneInfo = async () => {
     // console.log(phoneInfo.data);
     const phones = phoneInfo.data;
     displayPhoneInfo(phones);
-    showPhoneDetails(phones);
 }
 loadPhoneInfo();
 
@@ -14,7 +13,6 @@ const displayPhoneInfo = (phones) => {
     // const mainContainer = document.getElementById('phones-wrapper');
     // console.log(phones);
     phones.forEach(phone => {
-        // console.log(phone);
         const phoneCard = document.createElement('div');
         phoneCard.setAttribute("id", "phone-card");
         phoneCard.innerHTML = `
@@ -26,11 +24,15 @@ const displayPhoneInfo = (phones) => {
                     <h3 class="text-2xl font-bold text-[#403F3F] text-center">${phone.phone_name}</h3>
                     <p class="text-base text-[#706F6F] text-center">There are many variations of passages of available, but the majority have suffered</p>
                     <p class="text-[#403F3F] text-2xl font-bold text-center">$999</p>
-                    <button id="details" class="btn capitalize bg-[#0D6EFD] text-white rounded-lg px-6 py-2 font-semibold text-base" onclick="my_modal_4.showModal()">Show Details</button>
+                    <button id="details" class="btn capitalize bg-[#0D6EFD] text-white rounded-lg px-6 py-2 font-semibold text-base" onclick="my_modal_4.showModal(); showDetails('${phone.slug}')">Show Details</button>
     
                 </div>`
         mainContainer.appendChild(phoneCard);
     })
+}
+
+const showDetails = (id) => {
+    console.log(id);
 }
 
 mainContainer.addEventListener('click', (event) => {
@@ -47,13 +49,11 @@ mainContainer.addEventListener('click', (event) => {
 // loadPhoneDetails();
 
 const modalDetails = document.getElementById('modal-details');
-const showPhoneDetails = async(phones) => {
-    // console.log(phones[1].slug);
-    const phoneId = phones[1].slug;
-    const phoneDetails = await fetch(`https://openapi.programming-hero.com/api/phone/${phoneId}`);
+const showPhoneDetails = async() => {   
+    const phoneDetails = await fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089');
     const details = await phoneDetails.json();
     const data = details.data;
-    console.log(data);
+    // console.log(data);
     const detailsContainer = document.getElementById('details-container');
     detailsContainer.innerHTML = `
                     <div id="img" class="bg-[#0D6EFD0D] flex justify-center items-center w-full py-16 rounded-lg">
