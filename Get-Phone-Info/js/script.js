@@ -5,7 +5,7 @@ const loadPhoneInfo = async () => {
     const phones = phoneInfo.data;
     displayPhoneInfo(phones);
 }
-
+loadPhoneInfo();
 
 const displayPhoneInfo = (phones) => {
     const mainContainer = document.getElementById('phones-wrapper');
@@ -30,16 +30,18 @@ const displayPhoneInfo = (phones) => {
     })
 }
 
-loadPhoneInfo();
 
 // load phone info using fetch api
-const loadPhoneDetails = () => {
-    fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089')
-        .then(data => data.json())
-        .then(json => console.log(json.data))
-}
-loadPhoneDetails();
+// const loadPhoneDetails = () => {
+//     fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089')
+//         .then(data => data.json())
+//         .then(json => console.log(json.data))
+// }
+// loadPhoneDetails();
 
-document.getElementById('details').addEventListener('click', function(e){
-    console.log(e.target.value);
-})
+
+const showPhoneDetails = async() => {
+    const phoneDetails = await fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089');
+    const details = await phoneDetails.json();
+    console.log(details.data.mainFeatures.chipSet);
+}
