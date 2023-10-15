@@ -4,31 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Small Tube</title>
-    <style>
-        header{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        #main-container{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 300px)); gap: 20px; justify-content: center;
-        }
-        #wrapper{
-            border: 2px solid lightgray;
-        }
-        #categories{
-            display: flex;
-            gap: 40px;
-            justify-content: center;
-        }
-        #categories li{
-            list-style-type: none;
-            background-color: lightblue;
-            padding: 5px 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
+    
 </head>
+
 <body>
     <header>
         <div>
@@ -54,9 +33,15 @@
         <br><hr><br>
         <div id="main-container">
             <div id="wrapper">
-                <div>card-1</div>
+                <div id="title">card-1</div>
+                <div id="views">card-1</div>
             </div>
         </div>
     </main>
+
+
+
+    <!-- link to javascript files -->
+    <script src="./js/script.js"></script>
 </body>
 </html>
