@@ -14,13 +14,14 @@ const getViews = (dataArray) => {
         const views = data.others.views;
         // console.log(views);
         const viewsInNum = removeLetterFromString(views);
-        console.log(viewsInNum);
+        // console.log(viewsInNum);
         viewsArray.push(viewsInNum);
         
     })
     // console.log(viewsArray);
     const sortedViews = descending(viewsArray);
     console.log(sortedViews);
+    showTheViews(sortedViews);
 }
 
 const removeLetterFromString = (str) => {
@@ -36,3 +37,13 @@ const descending = (myArray) => {
     return myArray;
 }
 
+const viewList = document.getElementById('displayViews');
+const showTheViews = (sortedViews) => {
+    
+    sortedViews.forEach(view => {
+        const li = document.createElement('li');
+        li.innerHTML = view;
+        viewList.appendChild(li);
+        console.log(view);
+    })
+}
