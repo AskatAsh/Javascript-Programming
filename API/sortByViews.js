@@ -8,7 +8,7 @@ const fetchCategory = async () => {
 fetchCategory();
 
 const getViews = (dataArray) => {
-    // const timeList = document.getElementById('showTime');
+    
     const viewsArray = [];
     dataArray.forEach(data => {
         const views = data.others.views;
@@ -16,9 +16,11 @@ const getViews = (dataArray) => {
         const viewsInNum = removeLetterFromString(views);
         console.log(viewsInNum);
         viewsArray.push(viewsInNum);
-        // const li = document.createElement('li');
+        
     })
-    console.log(viewsArray);
+    // console.log(viewsArray);
+    const sortedViews = descending(viewsArray);
+    console.log(sortedViews);
 }
 
 const removeLetterFromString = (str) => {
@@ -27,3 +29,10 @@ const removeLetterFromString = (str) => {
     const toNum = parseFloat(newString);
     return toNum;
 }
+
+const descending = (myArray) => {
+    myArray.sort((a, b) => b - a);
+    // console.log(myArray);
+    return myArray;
+}
+
