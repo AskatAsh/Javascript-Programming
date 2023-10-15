@@ -19,15 +19,24 @@ const getPostDate = (dataArray) => {
     })
 }
 
-categoryList.addEventListener('click', function(event){
-    console.log(event.target.innerHTML);
-    // getCategory(event.target.innerHTML)
-})
+// categoryList.addEventListener('click', function(event){
+//     console.log(event.target.innerHTML);
+//     // getCategory(event.target.innerHTML)
+// })
 
 
 const getCategoryId = (dataArray) => {
-    dataArray.forEach(data => {        
-        const categoryId = data.category_id;
-        console.log(categoryId);
+    categoryList.addEventListener('click', function(event){
+        console.log(event.target.innerHTML);
+        const category = event.target.innerHTML;
+        dataArray.forEach(data => {        
+            if(category === data.category){
+                console.log(data.category_id);
+            }
+        })
     })
+    // dataArray.forEach(data => {        
+    //     const categoryId = data.category_id;
+    //     console.log(categoryId);
+    // })
 }
