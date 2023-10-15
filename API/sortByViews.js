@@ -3,5 +3,15 @@ const fetchCategory = async () => {
     const gotData = await data.json();
     const dataArray = gotData.data
     console.log(dataArray);
+    getViews(dataArray);
 }
 fetchCategory();
+
+const getViews = (dataArray) => {
+    // const timeList = document.getElementById('showTime');
+    dataArray.forEach(data => {
+        const views = data.others.views;
+        console.log(views);
+        // const li = document.createElement('li');
+    })
+}
