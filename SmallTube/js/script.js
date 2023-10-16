@@ -2,10 +2,9 @@
 const fetchData = async () => {
     const data = await fetch('https://openapi.programming-hero.com/api/videos/category/1000');
     const gotData = await data.json();
-    console.log(gotData);
-    // const dataArray = gotData.data
-    // console.log(dataArray);
+    // console.log(gotData);
     getStatus(gotData);
+    showAllDefault(gotData);
 }
 fetchData();
 
@@ -36,20 +35,35 @@ const getStatus = (mainData) => {
 
 
 // Add click event to categories
-const categories = document.getElementById('categories');
-categories.addEventListener('click', function(event){
-    console.log(event.target.innerHTML);
-    const selectedCategory = event.target.innerHTML;
-    if(selectedCategory === 'All'){
-        console.log("Show all Vlogs!");
-    }
-    else if(selectedCategory === 'Music'){
-        console.log("Show Music Vlogs!");
-    }
-    else if(selectedCategory === 'Comedy'){
-        console.log("Show Comedy Vlogs!");
-    }
-    else if(selectedCategory === 'Drawing'){
-        console.log("Show Drawing Vlogs!");
-    }
-})
+// const categories = document.getElementById('categories');
+// categories.addEventListener('click', function(event){
+//     console.log(event.target.innerHTML);
+//     const selectedCategory = event.target.innerHTML;
+//     if(selectedCategory === 'All'){
+//         console.log("Show all Vlogs!");
+//     }
+//     else if(selectedCategory === 'Music'){
+//         console.log("Show Music Vlogs!");
+//     }
+//     else if(selectedCategory === 'Comedy'){
+//         console.log("Show Comedy Vlogs!");
+//     }
+//     else if(selectedCategory === 'Drawing'){
+//         console.log("Show Drawing Vlogs!");
+//     }
+// })
+
+// show All categories cards
+const cardsContainer = document.getElementById('main-container');
+const showAllDefault = (gotData) => {
+    console.log(gotData.data);
+    const dataArray = gotData.data;
+    dataArray.forEach(data => {
+        const wrapper = document.createElement('div');
+        wrapper.setAttribute("id", "wrapper");
+        // console.log(data.title);
+        wrapper.innerHTML = `<p>${data.title}</p>
+        <p>${data.others.views}</p>`
+        cardsContainer.appendChild(wrapper);
+    })
+}
