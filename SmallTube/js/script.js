@@ -5,6 +5,7 @@ const fetchData = async () => {
     // console.log(gotData);
     getStatus(gotData);
     showAllDefault(gotData);
+    getViews(gotData.data);
 }
 fetchData();
 
@@ -56,7 +57,7 @@ const getStatus = (mainData) => {
 // show All categories cards
 const cardsContainer = document.getElementById('main-container');
 const showAllDefault = (gotData) => {
-    console.log(gotData.data);
+    // console.log(gotData.data);
     const dataArray = gotData.data;
     dataArray.forEach(data => {
         const wrapper = document.createElement('div');
@@ -67,3 +68,48 @@ const showAllDefault = (gotData) => {
         cardsContainer.appendChild(wrapper);
     })
 }
+
+// add click event to sortByViews
+
+// this function get the views from API
+const getViews = (dataArray) => {
+    // console.log(dataArray);
+    const viewsArray = [];
+    dataArray.forEach(data => {
+        const views = data.others.views;
+        // console.log(views);
+        const viewsInNum = removeLetterFromString(views);
+        // console.log(viewsInNum);
+        viewsArray.push(viewsInNum);
+        
+    })
+    // console.log(viewsArray);
+    const sortedViews = descending(viewsArray);
+    console.log(sortedViews);
+    // showTheViews(sortedViews);
+}
+
+// this function removes last character 'K' from views
+const removeLetterFromString = (str) => {
+    // const newString = str.slice(0, -1);
+    const newString = str.substring(0, str.length-1);
+    const toNum = parseFloat(newString);
+    return toNum;
+}
+// This function sorts the views array in descending order
+const descending = (myArray) => {
+    myArray.sort((a, b) => b - a);
+    // console.log(myArray);
+    return myArray;
+}
+
+// const viewList = document.getElementById('displayViews');
+// const showTheViews = (sortedViews) => {
+    
+//     sortedViews.forEach(view => {
+//         const li = document.createElement('li');
+//         li.innerHTML = view;
+//         viewList.appendChild(li);
+//         console.log(view);
+//     })
+// }
