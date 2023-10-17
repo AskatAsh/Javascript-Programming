@@ -1,7 +1,7 @@
 // console.log( Math.floor(Math.random()*100)+1 );
 // const randomNumber = parseInt(Math.random()*100+1);
 let randomNumber = Math.floor(Math.random()*100)+1 ;
-console.log(randomNumber);
+// console.log(randomNumber);
 
 const submit = document.querySelector('#submit');
 const userInput = document.querySelector('#numInput');
@@ -22,7 +22,7 @@ if(playGame){
     submit.addEventListener('click', function(e){
         e.preventDefault();
         const guess = parseInt(userInput.value);
-        console.log(guess);
+        // console.log(guess);
         validateGuess(guess)
     })
 }
@@ -89,7 +89,7 @@ function newGame(){
     const newGameButton = document.querySelector('#newGame');
     newGameButton.addEventListener('click', function(){
         randomNumber = parseInt(Math.random()*100+1);
-        console.log(randomNumber);
+        // console.log(randomNumber);
         prevGuess = [];
         guessCount = 1;
         numOfGuesses.innerHTML = '';
