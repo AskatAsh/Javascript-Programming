@@ -62,6 +62,9 @@ function checkGuess(guess){
 function displayGuess(guess){
     // displays previous guesses and remaining guessse
     userInput.value = '';
+    numOfGuesses.innerHTML += `${guess} `;
+    guessCount++;
+    guessesRemaining.innerHTML = `${11-guessCount}`;
 }
 
 function displayMessage(message){
