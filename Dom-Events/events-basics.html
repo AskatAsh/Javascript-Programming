@@ -19,21 +19,26 @@
 
 <script>
 
+    // document.getElementById('list').addEventListener('click', function(e){
+    //     console.log("Ul is clicked!");
+    // }, false)
+
+    // document.getElementById('item-2').addEventListener('click', function(e){
+    //     console.log("List Item 2 is clicked!");
+    //     e.stopPropagation();
+    // }, false)
+
+    // document.getElementById('link').addEventListener('click', function(e){
+    //     console.log("Google link is clicked!");
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    // }, false)
+
     document.getElementById('list').addEventListener('click', function(e){
-        console.log("Ul is clicked!");
-    }, false)
-
-    document.getElementById('item-2').addEventListener('click', function(e){
-        console.log("List Item 2 is clicked!");
-        e.stopPropagation();
-    }, false)
-
-    document.getElementById('link').addEventListener('click', function(e){
-        console.log("Google link is clicked!");
+        console.log(e.target.parentNode);
+        e.target.remove();
         e.preventDefault();
-        e.stopPropagation();
     }, false)
-
 
 </script>
 </html>
