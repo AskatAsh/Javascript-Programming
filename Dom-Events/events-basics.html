@@ -13,7 +13,7 @@
         <li id="item-2">List Item 2</li>
         <li id="item-3">List Item 3</li>
         <li id="item-4">List Item 4</li>
-        <li id="item-5"><a href="http://www.google.com">Google</a></li>
+        <li id="item-5"><a href="http://www.google.com" id="link">Google</a></li>
     </ul>
 </body>
 
@@ -21,11 +21,12 @@
 
     document.getElementById('list').addEventListener('click', function(e){
         console.log("Ul is clicked!");
-    },true)
+    }, false)
 
     document.getElementById('item-2').addEventListener('click', function(e){
         console.log("List Item 2 is clicked!");
-    },true)
+        e.stopPropagation();
+    }, false)
 
 
 </script>
