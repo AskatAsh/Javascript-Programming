@@ -47,10 +47,21 @@ function validateGuess(guess) {
 
 function checkGuess(guess){
     // checks if the guessed value is correct
+    if(guess === randomNumber){
+        displayMessage(`You have guessed the correct number!!!`);
+        endGame();
+    }
+    else if(guess < randomNumber){
+        displayMessage('Guess a Higher number!!!');
+    }
+    else if(guess < randomNumber){
+        displayMessage('Guess a Lower number!!!');
+    }
 }
 
 function displayGuess(guess){
     // displays previous guesses and remaining guessse
+    userInput.value = '';
 }
 
 function displayMessage(message){
