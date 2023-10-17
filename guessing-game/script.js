@@ -23,10 +23,21 @@ if(playGame){
         e.preventDefault();
         const guess = parseInt(userInput.value);
         console.log(guess);
+        validateGuess(guess)
     })
 }
 function validateGuess(guess) {
     //validate input values of the input field
+    if(isNaN(guess) || guess<1 || guess>100){
+        alert("Invalid Input!");
+    }
+    else{
+        prevGuess.push(guess);
+        if(guessCount > 10){
+            displayGuess(guess);
+            displayMessage(`Game Over. The Random number was ${randomNumber}`);
+        }
+    }
 }
 
 function checkGuess(guess){
