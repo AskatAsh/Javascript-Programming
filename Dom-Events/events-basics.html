@@ -35,9 +35,10 @@
     // }, false)
 
     document.getElementById('list').addEventListener('click', function(e){
-        console.log(e.target.parentNode);
+        // console.log(e.target.parentNode);
+        console.log(e.target.tagName);
         // e.target.remove();
-        e.target.parentNode.removeChild(e.target);
+        // e.target.parentNode.removeChild(e.target);
         e.preventDefault();
     }, false)
 
