@@ -8,4 +8,5 @@ const userInput = document.querySelector('#numInput');
 const numOfGuesses = document.querySelector('.guesses');
 const guessesRemaining = document.querySelector('.remaining');
 const lowOrHigh = document.querySelector('.lowOrHigh');
-console.log(lowOrHigh);
+const starOver = document.querySelector('#results');
+console.log(starOver);
