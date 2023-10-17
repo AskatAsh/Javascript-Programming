@@ -1,7 +1,7 @@
 // console.log( Math.floor(Math.random()*100)+1 );
 // const randomNumber = parseInt(Math.random()*100+1);
 const randomNumber = Math.floor(Math.random()*100)+1 ;
-// console.log(randomNumber);
+console.log(randomNumber);
 
 const submit = document.querySelector('#submit');
 const userInput = document.querySelector('#numInput');
@@ -54,7 +54,7 @@ function checkGuess(guess){
     else if(guess < randomNumber){
         displayMessage('Guess a Higher number!!!');
     }
-    else if(guess < randomNumber){
+    else if(guess > randomNumber){
         displayMessage('Guess a Lower number!!!');
     }
 }
@@ -69,6 +69,7 @@ function displayGuess(guess){
 
 function displayMessage(message){
     // displays low or high message
+    lowOrHigh.innerHTML = message;
 }
 
 function newGame(){
