@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Basics Events</title>
+</head>
+<body>
+    <h1>More about Javascript Events</h1>
+
+    <ul id="list">
+        <li id="item-1">List Item 1</li>
+        <li id="item-2">List Item 2</li>
+        <li id="item-3">List Item 3</li>
+        <li id="item-4">List Item 4</li>
+        <li id="item-5"><a href="http://www.google.com">Google</a></li>
+    </ul>
+</body>
+
+<script>
+
+    document.getElementById('list').addEventListener('click', function(e){
+        console.log("Ul is clicked!");
+    },false)
+
+    document.getElementById('item-2').addEventListener('click', function(e){
+        console.log("List Item 2 is clicked!");
+    },false)
+
+
+</script>
+</html>
