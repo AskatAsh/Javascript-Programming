@@ -37,8 +37,15 @@
     document.getElementById('list').addEventListener('click', function(e){
         // console.log(e.target.parentNode);
         console.log(e.target.tagName);
-        // e.target.remove();
-        // e.target.parentNode.removeChild(e.target);
+        if(e.target.tagName === 'LI'){
+            console.log(e.target.parentNode);
+            // e.target.remove();
+            e.target.parentNode.removeChild(e.target);
+        }
+        if(e.target.tagName === 'A'){
+            e.target.parentNode.remove();
+        }
+        
         e.preventDefault();
     }, false)
 
