@@ -36,6 +36,7 @@ function validateGuess(guess) {
         if(guessCount > 10){
             displayGuess(guess);
             displayMessage(`Game Over. The Random number was ${randomNumber}`);
+            endGame();
         }
     }
 }
