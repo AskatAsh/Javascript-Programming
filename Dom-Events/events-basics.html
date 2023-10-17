@@ -28,6 +28,12 @@
         e.stopPropagation();
     }, false)
 
+    document.getElementById('link').addEventListener('click', function(e){
+        console.log("Google link is clicked!");
+        e.preventDefault();
+        e.stopPropagation();
+    }, false)
+
 
 </script>
 </html>
