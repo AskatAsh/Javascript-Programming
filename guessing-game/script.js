@@ -62,7 +62,7 @@ function checkGuess(guess){
 function displayGuess(guess){
     // displays previous guesses and remaining guessse
     userInput.value = '';
-    numOfGuesses.innerHTML += `${guess} `;
+    numOfGuesses.innerHTML += `${guess}  `;
     guessCount++;
     guessesRemaining.innerHTML = `${11-guessCount}`;
 }
@@ -78,4 +78,11 @@ function newGame(){
 
 function endGame(){
     // ends the game
+    userInput.innerHTML = '';
+    userInput.setAttribute('disabled', '');
+    p.classList.add('button');
+    p.innerHTML = `<h2 id="newGame">Start New Game</h2>`;
+    starOver.appendChild(p);
+    playGame = false;
+    newGame();
 }
