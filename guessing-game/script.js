@@ -10,3 +10,5 @@ const guessesRemaining = document.querySelector('.remaining');
 const lowOrHigh = document.querySelector('.lowOrHigh');
 const starOver = document.querySelector('#results');
 console.log(starOver);
+
+const p = document.createElement('p');
