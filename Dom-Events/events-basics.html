@@ -36,7 +36,8 @@
 
     document.getElementById('list').addEventListener('click', function(e){
         console.log(e.target.parentNode);
-        e.target.remove();
+        // e.target.remove();
+        e.target.parentNode.removeChild(e.target);
         e.preventDefault();
     }, false)
 
