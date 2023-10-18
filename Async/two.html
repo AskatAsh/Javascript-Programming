@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asynchronus Javascript</title>
 </head>
+
 <body>
     <h1>Javascript- setInterval</h1>
     <button id="start">start</button>
@@ -12,11 +14,19 @@
 
 
     <script>
-        const sayName = function(str){
+        const sayName = function (str) {
             console.log(str, Date.now());
         };
-        const interval = setInterval(sayName, 2000, "Hello Askat")
-        clearInterval(interval);
+        // const interval = setInterval(sayName, 2000, "Hello Askat")
+        // clearInterval(interval);
+        document.querySelector('#start').addEventListener('click', function () {
+            const interval = setInterval(sayName, 2000, "Hello Askat");
+            document.querySelector('#stop').addEventListener('click', function () {
+                clearInterval(interval);
+            })
+        })
+
     </script>
 </body>
+
 </html>
