@@ -12,10 +12,10 @@
 
 
     <script>
-        const sayName = function(){
-            console.log("my name is askat", Date.now());
+        const sayName = function(str){
+            console.log(str, Date.now());
         };
-        setInterval(sayName, 1000)
+        setInterval(sayName, 2000, "Hello Askat")
     </script>
 </body>
 </html>
