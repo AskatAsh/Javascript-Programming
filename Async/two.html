@@ -15,7 +15,8 @@
         const sayName = function(str){
             console.log(str, Date.now());
         };
-        setInterval(sayName, 2000, "Hello Askat")
+        const interval = setInterval(sayName, 2000, "Hello Askat")
+        clearInterval(interval);
     </script>
 </body>
 </html>
