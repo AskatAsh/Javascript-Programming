@@ -64,7 +64,9 @@ const showPhoneDetails = async(id) => {
 // search function handler
 
 const handleSearch = () => {
-    console.log("clicked on search button");
+    const searchInput = document.getElementById('searchField');
+    const searchText = searchInput.value;
+    console.log(searchText);
 }
 
 document.getElementById('searchButton').addEventListener('click', function(){
