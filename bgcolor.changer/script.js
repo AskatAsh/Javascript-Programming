@@ -11,7 +11,7 @@ const randomColor = function () {
     // console.log(color);
     return color;
 }
-randomColor();
+// randomColor();
 
 // let bgChanger;
 
@@ -32,6 +32,7 @@ const startBgColor = function () {
 };
 const stopBgColor = function () {
     clearInterval(bgChanger);
+    bgChanger = null;
 };
 
 document.querySelector('#start').addEventListener('click', startBgColor);
