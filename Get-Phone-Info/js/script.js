@@ -1,5 +1,5 @@
-const loadPhoneInfo = async (id) => {
-    const phoneData = await fetch(`https://openapi.programming-hero.com/api/phones?search=${id}`);
+const loadPhoneInfo = async (searchText = "samsung") => {
+    const phoneData = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     const phoneInfo = await phoneData.json();
     // console.log(phoneInfo.data);
     const phones = phoneInfo.data;
