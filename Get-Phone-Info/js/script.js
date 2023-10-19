@@ -10,8 +10,13 @@ loadPhoneInfo();
 // get phone info from API and show in cards
 const mainContainer = document.getElementById('phones-wrapper');
 const displayPhoneInfo = (phones) => {
-    mainContainer.innerHTML = "";
+    
+    mainContainer.innerHTML = ""; // clear container before entering new data
     // console.log(phones);
+    if(phones.length === 0){
+        mainContainer.innerHTML = `
+        <h2>Sorry! No info on found on this phone!</h2>`;
+    }
     phones.forEach(phone => {
         const phoneCard = document.createElement('div');
         phoneCard.setAttribute("id", "phone-card");
@@ -66,8 +71,14 @@ const showPhoneDetails = async(id) => {
 const handleSearch = () => {
     const searchInput = document.getElementById('searchField');
     const searchText = searchInput.value;
+    if(searchText === ""){
+        loadPhoneInfo();
+        alert("Enter a phone Brand and click search");
+    }
+    else{
+        loadPhoneInfo(searchText);
+    }
     // console.log(searchText);
-    loadPhoneInfo(searchText);
 }
 
 document.getElementById('searchButton').addEventListener('click', function(){
