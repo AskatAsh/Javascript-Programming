@@ -8,6 +8,11 @@ const randomColor = function(){
         // console.log(index);
         color += hex[index];
     }
-    console.log(color);
+    // console.log(color);
+    return color;
 }
 randomColor();
+
+document.querySelector('#start').addEventListener('click', function(){
+    document.body.style.backgroundColor = randomColor();
+})
