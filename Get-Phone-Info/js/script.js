@@ -12,7 +12,12 @@ const mainContainer = document.getElementById('phones-wrapper');
 const displayPhoneInfo = (phones) => {
     
     mainContainer.innerHTML = ""; // clear container before entering new data
-    // console.log(phones);
+    console.log(phones.length);
+
+    // slicing phones array to display few phones
+    phones = phones.slice(0, 12);
+
+    // condition for giving wrong search input
     if(phones.length === 0){
         mainContainer.innerHTML = `
         <h2>Sorry! No info on found on this phone!</h2>`;
@@ -21,7 +26,7 @@ const displayPhoneInfo = (phones) => {
         const phoneCard = document.createElement('div');
         phoneCard.setAttribute("id", "phone-card");
         phoneCard.innerHTML = `
-                <div class="p-6 border-2 rounded-lg flex flex-col items-center gap-5">
+                <div class="p-6 border-2 rounded-lg flex flex-col items-center gap-4">
                 
                     <div id="img" class="bg-[#0D6EFD0D] flex justify-center items-center w-full py-10 rounded-lg">
                         <img src="${phone.image}" alt="">
