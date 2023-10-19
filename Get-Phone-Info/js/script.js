@@ -7,7 +7,7 @@ const loadPhoneInfo = async () => {
 }
 loadPhoneInfo();
 
-
+// get phone info from API and show in cards
 const mainContainer = document.getElementById('phones-wrapper');
 const displayPhoneInfo = (phones) => {
     // const mainContainer = document.getElementById('phones-wrapper');
@@ -36,19 +36,7 @@ const showDetails = (id) => {
     showPhoneDetails(id);
 }
 
-// mainContainer.addEventListener('click', (event) => {
-//     if(event.target && event.target.id === "details"){
-//         showPhoneDetails();
-//     }
-// })
-// load phone info using fetch api
-// const loadPhoneDetails = () => {
-//     fetch('https://openapi.programming-hero.com/api/phone/apple_iphone_13_pro_max-11089')
-//         .then(data => data.json())
-//         .then(json => console.log(json.data))
-// }
-// loadPhoneDetails();
-
+// get Phone details from API and show them in each card.
 const modalDetails = document.getElementById('modal-details');
 const showPhoneDetails = async(id) => {   
     const phoneDetails = await fetch(`https://openapi.programming-hero.com/api/phone/${id}`);
@@ -72,3 +60,13 @@ const showPhoneDetails = async(id) => {
                     <p class="text-base md:text-lg"><span>GPS :</span> ${data.others.GPS}</p>`
     modalDetails.appendChild(detailsContainer);
 }
+
+// search function handler
+
+const handleSearch = () => {
+    console.log("clicked on search button");
+}
+
+document.getElementById('searchButton').addEventListener('click', function(){
+    handleSearch();  
+})
