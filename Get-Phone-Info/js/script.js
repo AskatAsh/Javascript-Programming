@@ -14,6 +14,15 @@ const displayPhoneInfo = (phones) => {
     mainContainer.innerHTML = ""; // clear container before entering new data
     console.log(phones.length);
 
+    // display show all if there are more than 12 phones
+    const showAllContainer = document.getElementById('showAllContainer');
+    if(phones.length > 12){
+        showAllContainer.classList.remove("hidden");
+    }
+    else{
+        showAllContainer.classList.add("hidden");
+    }
+
     // slicing phones array to display few phones
     phones = phones.slice(0, 12);
 
@@ -88,4 +97,9 @@ const handleSearch = () => {
 
 document.getElementById('searchButton').addEventListener('click', function(){
     handleSearch();  
+})
+
+// show all button function
+document.getElementById('showAll').addEventListener('click', function(){
+
 })
