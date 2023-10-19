@@ -13,6 +13,13 @@ const randomColor = function(){
 }
 randomColor();
 
+let bgChanger;
+
 document.querySelector('#start').addEventListener('click', function(){
-    document.body.style.backgroundColor = randomColor();
+    bgChanger = setInterval(function(){
+        document.body.style.backgroundColor = randomColor();
+    },1000)
+})
+document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(bgChanger);
 })
