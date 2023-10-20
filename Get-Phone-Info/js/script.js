@@ -5,7 +5,7 @@ const loadPhoneInfo = async (searchText = "samsung") => {
     const phones = phoneInfo.data;
     displayPhoneInfo(phones);
 }
-loadPhoneInfo();
+// loadPhoneInfo();
 
 // get phone info from API and show in cards
 const mainContainer = document.getElementById('phones-wrapper');
@@ -107,3 +107,5 @@ document.getElementById('searchButton').addEventListener('click', function(){
 document.getElementById('showAll').addEventListener('click', function(){
 
 })
+
+loadPhoneInfo();
