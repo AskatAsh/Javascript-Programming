@@ -61,24 +61,22 @@
 
     <!-- modal dialog box showing phone details -->
     <!-- You can open the modal using ID.showModal() method -->
-    <dialog id="my_modal_4" class="modal">
+    <dialog id="my_modal_4" class="modal relative">
         <div class="modal-box w-11/12 lg:w-[752px] text-[#403F3F]">
             <div id="modal-details">
                 <div id="details-container" class="flex flex-col gap-3">
                     
                 </div>
-            </div>
-
-
-            <div class="modal-action">
-                <form method="dialog">
-                    <!-- if there is a button, it will close the modal -->
-                    <button class="bg-[#DC3545] text-white text-lg font-bold px-10 py-3 rounded-lg">Close</button>
-                </form>
-            </div>
-            
+            </div>          
+        </div>
+        <div class="modal-action absolute -top-2">
+            <form method="dialog">
+                <!-- if there is a button, it will close the modal -->
+                <button class="bg-[#DC3545] text-white text-lg font-bold rounded-full px-5 py-2">X</button>
+            </form>
         </div>
     </dialog>
+    
 
     <!-- link to main script.js file -->
     <script src="./js/script.js"></script>
