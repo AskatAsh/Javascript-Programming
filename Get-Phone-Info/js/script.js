@@ -29,7 +29,7 @@ const displayPhoneInfo = (phones) => {
     // condition for giving wrong search input
     if(phones.length === 0){
         mainContainer.innerHTML = `
-        <h2>Sorry! No info on found on this phone!</h2>`;
+        <h2>Sorry! No info found on this phone!</h2>`;
     }
     phones.forEach(phone => {
         const phoneCard = document.createElement('div');
@@ -96,6 +96,8 @@ const handleSearch = () => {
 }
 
 document.getElementById('searchButton').addEventListener('click', function(){
+    const loader = document.getElementById('loader');
+    loader.classList.remove("hidden");
     handleSearch();  
 })
 
