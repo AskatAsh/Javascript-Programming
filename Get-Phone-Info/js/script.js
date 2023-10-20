@@ -11,14 +11,13 @@ const loadPhoneInfo = async (searchText = "samsung", showAll) => {
 const mainContainer = document.getElementById('phones-wrapper');
 const loader = document.getElementById('loader'); // loader parent div
 const showAllButton = document.getElementById('showAll'); // show all button
-
 const displayPhoneInfo = (phones, showAll) => {
     
     mainContainer.innerHTML = ""; // clear container before entering new data
     // console.log(phones.length);
 
     // display show all if there are more than 12 phones
-    const showAllContainer = document.getElementById('showAllContainer');
+    const showAllContainer = document.getElementById('showAllContainer'); // show all button container
     if(phones.length > 12){
         showAllContainer.classList.remove("hidden");
     }
@@ -29,8 +28,8 @@ const displayPhoneInfo = (phones, showAll) => {
     // slicing phones array to display few phones
     
     if(showAll){
-        phones = phones.slice(0, phones.length-1);
-        showAllButton.classList.add("hidden");
+        phones = phones.slice(0, phones.length);
+        showAllContainer.classList.add("hidden");
     }
     else{
         phones = phones.slice(0, 12);
@@ -94,7 +93,7 @@ const showPhoneDetails = async(id) => {
 // search function handler
 
 const handleSearch = (showAll) => {
-    
+    // console.log(showAll);
     const searchInput = document.getElementById('searchField');
     const searchText = searchInput.value;
     if(showAll){
@@ -110,14 +109,14 @@ const handleSearch = (showAll) => {
         alert("Enter a phone Brand and click search");
     }
     else{
-        loadPhoneInfo(searchText);
+        loadPhoneInfo(searchText, showAll);
     }
     // console.log(searchText);
 }
 
 document.getElementById('searchButton').addEventListener('click', function(){
     loader.classList.remove("hidden");
-    handleSearch();  
+    handleSearch(false);  
 })
 
 // show all button function
