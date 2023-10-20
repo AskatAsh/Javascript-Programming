@@ -86,7 +86,7 @@ const showPhoneDetails = async(id) => {
                     <p class="text-base md:text-lg"><span>Slug :</span> ${data.slug}</p>    
                     <p class="text-base md:text-lg"><span>Release data :</span> ${data.releaseDate}</p>    
                     <p class="text-base md:text-lg"><span>Brand :</span> ${data.brand}</p>    
-                    <p class="text-base md:text-lg"><span>GPS :</span> ${data.others.GPS}</p>`
+                    <p class="text-base md:text-lg"><span>GPS :</span> ${data?.others?.GPS}</p>`
     modalDetails.appendChild(detailsContainer);
 }
 
