@@ -9,6 +9,8 @@ loadPhoneInfo();
 
 // get phone info from API and show in cards
 const mainContainer = document.getElementById('phones-wrapper');
+const loader = document.getElementById('loader'); // loader parent div
+
 const displayPhoneInfo = (phones) => {
     
     mainContainer.innerHTML = ""; // clear container before entering new data
@@ -48,6 +50,7 @@ const displayPhoneInfo = (phones) => {
                 </div>`
         mainContainer.appendChild(phoneCard);
     })
+    loader.classList.add("hidden");
 }
 
 const showDetails = (id) => {
@@ -96,7 +99,6 @@ const handleSearch = () => {
 }
 
 document.getElementById('searchButton').addEventListener('click', function(){
-    const loader = document.getElementById('loader');
     loader.classList.remove("hidden");
     handleSearch();  
 })
