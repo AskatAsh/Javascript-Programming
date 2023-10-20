@@ -1,20 +1,21 @@
-const loadPhoneInfo = async (searchText = "samsung") => {
+const loadPhoneInfo = async (searchText = "samsung", showAll) => {
     const phoneData = await fetch(`https://openapi.programming-hero.com/api/phones?search=${searchText}`);
     const phoneInfo = await phoneData.json();
     // console.log(phoneInfo.data);
     const phones = phoneInfo.data;
-    displayPhoneInfo(phones);
+    displayPhoneInfo(phones, showAll);
 }
 // loadPhoneInfo();
 
 // get phone info from API and show in cards
 const mainContainer = document.getElementById('phones-wrapper');
 const loader = document.getElementById('loader'); // loader parent div
+const showAllButton = document.getElementById('showAll'); // show all button
 
-const displayPhoneInfo = (phones) => {
+const displayPhoneInfo = (phones, showAll) => {
     
     mainContainer.innerHTML = ""; // clear container before entering new data
-    console.log(phones.length);
+    // console.log(phones.length);
 
     // display show all if there are more than 12 phones
     const showAllContainer = document.getElementById('showAllContainer');
@@ -26,7 +27,14 @@ const displayPhoneInfo = (phones) => {
     }
 
     // slicing phones array to display few phones
-    phones = phones.slice(0, 12);
+    
+    if(showAll){
+        phones = phones.slice(0, phones.length-1);
+        showAllButton.classList.add("hidden");
+    }
+    else{
+        phones = phones.slice(0, 12);
+    }
 
     // condition for giving wrong search input
     if(phones.length === 0){
@@ -85,10 +93,19 @@ const showPhoneDetails = async(id) => {
 
 // search function handler
 
-const handleSearch = () => {
+const handleSearch = (showAll) => {
+    
     const searchInput = document.getElementById('searchField');
     const searchText = searchInput.value;
-    if(searchText === ""){
+    if(showAll){
+        if(searchText == ""){
+            loadPhoneInfo("samsung", showAll)
+        }
+        else{
+            loadPhoneInfo(searchText, showAll);
+        }
+    }
+    else if(searchText === ""){
         loadPhoneInfo();
         alert("Enter a phone Brand and click search");
     }
@@ -104,8 +121,8 @@ document.getElementById('searchButton').addEventListener('click', function(){
 })
 
 // show all button function
-document.getElementById('showAll').addEventListener('click', function(){
-
+showAllButton.addEventListener('click', function(){
+    handleSearch(true);
 })
 
 loadPhoneInfo();
