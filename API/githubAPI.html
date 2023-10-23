@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetching github API</title>
+</head>
+<body>
+    <div id="githubData"></div>
+</body>
+
+<script>
+    const fetchGithubApi = async() => {
+        const fetchData = await fetch('https://api.github.com/users/AskatAsh');
+        const getData = fetchData.json();
+        console.log(getData);
+        // return getData.login;
+    }
+    fetchGithubApi();
+</script>
+</html>
