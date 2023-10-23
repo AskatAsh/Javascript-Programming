@@ -16,7 +16,8 @@
     const getRandomApi = async() => {
         const getApi = await fetch('https://randomuser.me/api/');
         const gotData = await getApi.json();
-        console.log(gotData);
+        console.log(gotData.results[0].email);
+        document.getElementById('randomApiData').innerHTML = gotData.results[0].email;
     }
     getRandomApi();
 </script>
