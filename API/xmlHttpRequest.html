@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xml Http Request</title>
+</head>
+<body>
+    <h1>Getting data from API using xmlHttpRequest.</h1>
+    <div id="userData">
+        <div>
+            <img src="" alt="">
+            <p>UserName: <span></span></p>
+        </div>
+    </div>
+</body>
+
+<script>
+    const userData = document.getElementById('userData');
+    const url = 'https://api.github.com/users/AskatAsh';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url);
+    // console.log("Data is Here!");
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            // console.log("Response true");
+            console.log(this.responseText);
+            // const gotData = this.responseText; // string
+            const gotData = JSON.parse(this.responseText); // object
+            // console.log(typeof gotData);
+            console.log(gotData.name);
+            userData.innerHTML = `<div>
+            <img src="${gotData.avatar_url}" alt="" style="max-width: 240px;">
+            <p>UserName: <span>${gotData.name}</span></p>
+            <p>ID: <span>${gotData.id}</span></p>
+            <p>Location: <span>${gotData.location}</span></p>
+        </div>`
+        }
+    }
+    // console.log(xhr.readyState);
+    xhr.send();
+</script>
+</html>
