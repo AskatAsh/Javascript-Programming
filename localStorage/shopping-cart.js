@@ -10,12 +10,12 @@ const getProductQuantity = () => {
     saveToLocalStorage(product, quantity);
 }
 
-// const displayProduct = (product, quantity) => {
-//     const ul = document.getElementById('listContainer');
-//     const li = document.createElement('li');
-//     li.innerText = `${product}: ${quantity}`;
-//     ul.appendChild(li);
-// }
+const displayProduct = (product, quantity) => {
+    const ul = document.getElementById('listContainer');
+    const li = document.createElement('li');
+    li.innerText = `${product}: ${quantity}`;
+    ul.appendChild(li);
+}
 
 const getShopCart = () => {
     const savedCart = window.localStorage.getItem('cart');
