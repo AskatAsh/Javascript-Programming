@@ -10,17 +10,17 @@ const getProductQuantity = () => {
     saveToLocalStorage(product, quantity);
 }
 
-const displayProduct = (product, quantity) => {
-    const ul = document.getElementById('listContainer');
-    const li = document.createElement('li');
-    li.innerText = `${product}: ${quantity}`;
-    ul.appendChild(li);
-}
+// const displayProduct = (product, quantity) => {
+//     const ul = document.getElementById('listContainer');
+//     const li = document.createElement('li');
+//     li.innerText = `${product}: ${quantity}`;
+//     ul.appendChild(li);
+// }
 
 const getShopCart = () => {
     const savedCart = window.localStorage.getItem('cart');
     let cart = {};
-    if(savedCart){
+    if (savedCart) {
         cart = JSON.parse(savedCart);
     }
     return cart;
@@ -30,5 +30,21 @@ const saveToLocalStorage = (product, quantity) => {
     const cart = getShopCart();
     cart[product] = quantity;
     console.log(cart);
-    window.localStorage.setItem('cart', JSON.stringify(cart));
+    const cartString = JSON.stringify(cart);
+    window.localStorage.setItem('cart', cartString);
 }
+
+const showProductFromStorage = () => {
+    const ul = document.getElementById('listContainer');
+
+    const gotProduct = getShopCart();
+    console.log(gotProduct);
+    for (product in gotProduct) {
+        const quantity = gotProduct[product];
+        console.log(product, quantity);
+        const li = document.createElement('li');
+        li.innerText = `${product}: ${quantity}`;
+        ul.appendChild(li);
+    }
+}
+showProductFromStorage();
