@@ -1,5 +1,12 @@
+// function findHighestSalaryEmployee(employees) {
+//     const highest = employees.reduce((min, max) => Math.max(min, max.salary), 0);
+//     return highest;
+// }
+
 function findHighestSalaryEmployee(employees) {
-    const highest = employees.reduce((min, max) => Math.max(min, max.salary), 0);
+    const highest = employees.reduce((max, employee) => {
+        return employee.salary > max.salary ? employee : max;
+    }, employees[0]);
     return highest;
 }
 
