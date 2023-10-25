@@ -1,6 +1,10 @@
+// function mergeObjects(obj1, obj2) {
+//     const newObject = {};
+//     return Object.assign(newObject, obj1, obj2);
+// }
+
 function mergeObjects(obj1, obj2) {
-    const newObject = {};
-    return Object.assign(newObject, obj1, obj2);
+    return {...obj1, ...obj2};
 }
 
 const object1 = {
