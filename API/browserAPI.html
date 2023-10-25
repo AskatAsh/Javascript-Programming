@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser API</title>
+</head>
+<body>
+    <h1>Browser API - prompt, alert, confirm</h1>
+    <button onclick="promptText()">Click here to Prompt</button>
+    <button onclick="confirmJob()">Click here to Confirm</button>
+
+    <script>
+        function promptText(){
+            const nameAndAge = prompt("Hello, My name is Askat");
+            alertText(nameAndAge)
+        }
+        function alertText(nameAndAge){
+            alert(`Hello ${nameAndAge}`);
+        }
+        function confirmJob(){
+            const yesOrNO = confirm("Are you a Web developer?");
+            if(yesOrNO){
+                alert("So, You are a web developer!");
+            }
+            else{
+                alert("So, you are not a web developer!");
+            }
+        }
+    </script>
+</body>
+</html>
