@@ -72,3 +72,16 @@ async function consumePromiseFive() {
     }
 }
 consumePromiseFive();
+
+async function getAllUsers() {
+    try {
+        const getUsers = await fetch('https://jsonplaceholder.typicode.com/users');
+        const getData = await getUsers.json();
+        console.log(getData);
+    }
+    catch(error){
+        console.log("Error: ",error);
+    }
+}
+
+getAllUsers();
