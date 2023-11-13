@@ -14,7 +14,7 @@ let pxOrrem = 'pxtorem';
 
 convertBtn.addEventListener('click', function () {
     const inputValue = inputField.value;
-    console.log(inputValue);
+    // console.log(inputValue);
     if (pxOrrem == 'remtopx') {
         remtopx(inputValue);
     }
@@ -22,7 +22,7 @@ convertBtn.addEventListener('click', function () {
         pxTorem(inputValue);
     }
     // inputField.value = '';
-    console.log(pxOrrem);
+    // console.log(pxOrrem);
 })
 
 // this function converts pixel to rem
