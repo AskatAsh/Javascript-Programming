@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel to Rem</title>
     <style>
-        body{
+        body {
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -14,39 +15,65 @@
             padding: 0;
             margin: 0;
         }
-        .container{
+
+        .container {
             max-width: 500px;
             padding: 30px;
             border: 2px solid #ccc;
             border-radius: 8px;
         }
-        #px{
+
+        #inputField {
             border: 2px solid #ccc;
             padding: 5px;
             border-radius: 8px;
         }
-        #rem{
+
+        #ouputField {
             border: 2px solid #ccc;
             padding: 5px;
             height: 20px;
             border-radius: 8px;
         }
+        .buttons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .selected{
+            background-color: antiquewhite;
+            /* color: antiquewhite; */
+        }
+        .headerText{
+            background-color: antiquewhite;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
     </style>
 </head>
+
 <body>
-    <h1>Pixel to rem Converter</h1>
+    <h1><span class="headerText">Pixel to Rem</span> Converter</h1>
     <div class="container">
-        <label for="px">Pixel</label><br><br>
-        <input type="number" id="px"><br>
+        <div class="buttons">
+            <button id="pxtorem" class="selected">px to rem</button>
+            <button id="remtopx">rem to px</button>
+        </div>  
+
+        <p class="from">pixel</p>
+        <input type="number" id="inputField"><br>
         <p style="text-align: center;">To</p>
 
-        <p>rem</p>
-        <div id="rem"></div>
+        <p class="to">rem</p>
+        <div id="ouputField"></div>
 
         <br>
         <button id="convertBtn">Convert</button>
+
+        
     </div>
 
     <script src="./pxToRem.js"></script>
 </body>
+
 </html>
