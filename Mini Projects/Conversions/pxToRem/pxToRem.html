@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel to Rem</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            max-width: 500px;
+            padding: 30px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+        }
+        #px{
+            border: 2px solid #ccc;
+            padding: 5px;
+            border-radius: 8px;
+        }
+        #rem{
+            border: 2px solid #ccc;
+            padding: 5px;
+            height: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <label for="px">Pixel</label><br><br>
+        <input type="number" id="px"><br>
+        <p style="text-align: center;">To</p>
+
+        <p>rem</p>
+        <div id="rem"></div>
+
+        <br>
+        <button id="convertBtn">Convert</button>
+    </div>
+
+    <script src="./pxToRem.js"></script>
+</body>
+</html>
