@@ -19,8 +19,10 @@
         .container {
             max-width: 500px;
             padding: 30px;
+            margin: 10px;
             border: 2px solid #ccc;
             border-radius: 8px;
+            font-weight: bold;
         }
 
         #inputField {
@@ -28,6 +30,7 @@
             padding: 5px;
             height: 20px;
             border-radius: 8px;
+            font-weight: bold;
         }
 
         #ouputField {
@@ -35,6 +38,7 @@
             padding: 5px;
             height: 20px;
             border-radius: 8px;
+            font-weight: bold;
         }
         #convertBtn{
             padding: 5px 0px;
@@ -49,16 +53,26 @@
             background-color: antiquewhite;
             /* color: antiquewhite; */
         }
+        h1{
+            text-align: center;
+            margin: 10px;
+        }
         .headerText{
             background-color: antiquewhite;
             padding: 5px 15px;
             border-radius: 20px;
         }
+        .error{
+            color: crimson;
+        }
+        .hide{
+            display: none;
+        }
     </style>
 </head>
 
 <body>
-    <h1><span class="headerText">Pixel to Rem</span> Converter</h1>
+    <h1>Convert <span class="headerText">Pixel to Rem</span></h1>
     <div class="container">
         <div class="buttons">
             <button id="pxtorem" class="selected">px to rem</button>
@@ -66,7 +80,10 @@
         </div>  
 
         <p class="from">pixel</p>
-        <input type="number" id="inputField"><br>
+        <input type="text" id="inputField">
+        <br>
+        <small class="error hide">Please Enter a Valid Number..!!!</small>
+        <br>
         <p style="text-align: center;">To</p>
 
         <p class="to">rem</p>

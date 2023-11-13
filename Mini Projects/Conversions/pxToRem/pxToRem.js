@@ -9,18 +9,29 @@ const selectedPxtorem = document.querySelector('#pxtorem');
 const selectedRemtopx = document.querySelector('#remtopx');
 
 const headerText = document.querySelector('.headerText');
+const errorText = document.querySelector('.error');
 
 let pxOrrem = 'pxtorem';
 
 convertBtn.addEventListener('click', function () {
+
     const inputValue = inputField.value;
-    // console.log(inputValue);
-    if (pxOrrem == 'remtopx') {
-        remtopx(inputValue);
+
+    if (isNaN(inputValue)) {
+        // alert("Please Enter a valid Number!");
+        errorText.classList.remove('hide');
     }
     else {
-        pxTorem(inputValue);
+        errorText.classList.add('hide');
+        // console.log(inputValue);
+        if (pxOrrem == 'remtopx') {
+            remtopx(inputValue);
+        }
+        else {
+            pxTorem(inputValue);
+        }
     }
+
     // inputField.value = '';
     // console.log(pxOrrem);
 })
@@ -34,10 +45,16 @@ const pxTorem = (px) => {
 
 // this function converts pixel to rem
 const remtopx = (rem) => {
-    // const toPx = Math.floor(rem * 16);
     const toPx = rem * 16;
-    // console.log(toPx);
-    outputField.innerHTML = toPx;
+    const pxToInt = Math.ceil(rem * 16);
+    const diff = pxToInt - toPx;
+    if (diff < 1 && diff != 0) {
+        outputField.innerHTML = `${toPx} ~ ( ${pxToInt} )`;
+    }
+    else {
+        outputField.innerHTML = toPx;
+    }
+    console.log(toPx, pxToInt);
 }
 
 selectedRemtopx.addEventListener('click', (e) => {
