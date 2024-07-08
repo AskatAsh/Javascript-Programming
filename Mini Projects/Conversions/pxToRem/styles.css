@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  h1 {
+    font-size: 1.75rem;
+    text-align: center;
+    margin: 1.5rem 0;
+  }
+  .container {
+    max-width: 80%;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 1rem;
+    margin: 0 auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  #inputField, #outputField {
+    font-size: 2.25rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border: 2px solid #ccc;
+  }
+  .input-container, .output-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #convertBtn {
+    padding: 5px 0px;
+    width: 100%;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  button {
+    font-size: 1.5rem;
+    padding: 0.875rem 1rem;
+    border: 1px solid black;
+  }
+  #convertBtn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 1rem 0;
+  }
+  .selected {
+    background-color: antiquewhite;
+  }
+  .headerText {
+    background-color: antiquewhite;
+    padding: 0.375rem 1rem;
+    border-radius: 1rem;
+  }
+  .from, .to{
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .error {
+    color: crimson;
+    font-size: 14px;
+  }
+  .hide {
+    display: none;
+  }

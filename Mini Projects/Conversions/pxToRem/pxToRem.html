@@ -1,101 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pixel to Rem</title>
-    <style>
-        body {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 0;
-            margin: 0;
-        }
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./pxToRem.js" defer></script>
+  </head>
 
-        .container {
-            max-width: 500px;
-            padding: 30px;
-            margin: 10px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        #inputField {
-            border: 2px solid #ccc;
-            padding: 5px;
-            height: 20px;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        #ouputField {
-            border: 2px solid #ccc;
-            padding: 5px;
-            height: 20px;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-        #convertBtn{
-            padding: 5px 0px;
-            width: 100%;
-        }
-        .buttons{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .selected{
-            background-color: antiquewhite;
-            /* color: antiquewhite; */
-        }
-        h1{
-            text-align: center;
-            margin: 10px;
-        }
-        .headerText{
-            background-color: antiquewhite;
-            padding: 5px 15px;
-            border-radius: 20px;
-        }
-        .error{
-            color: crimson;
-        }
-        .hide{
-            display: none;
-        }
-    </style>
-</head>
-
-<body>
+  <body>
     <h1>Convert <span class="headerText">Pixel to Rem</span></h1>
     <div class="container">
-        <div class="buttons">
-            <button id="pxtorem" class="selected">px to rem</button>
-            <button id="remtopx">rem to px</button>
-        </div>  
 
-        <p class="from">pixel</p>
-        <input type="text" id="inputField">
-        <br>
+      <div class="buttons">
+        <button id="pxtorem" class="selected">px to rem</button>
+        <button id="remtopx">rem to px</button>
+      </div>
+
+      <div class="input-container">
+        <label class="from" for="inputField">pixel</label>
+        <input type="text" id="inputField" />
         <small class="error hide">Please Enter a Valid Number..!!!</small>
-        <br>
-        <p style="text-align: center;">To</p>
+      </div>
 
-        <p class="to">rem</p>
-        <div id="ouputField"></div>
+      <button id="convertBtn">Convert</button>
+      <p style="text-align: center; font-size: 1.5rem; font-weight: bold;">To</p>
 
-        <br>
-        <button id="convertBtn">Convert</button>
-
-        
+      <div class="output-container">
+        <label class="to" for="outputField">rem</label>
+        <div id="outputField">0</div>
+      </div>
     </div>
 
-    <script src="./pxToRem.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,0 +1,28 @@
+{
+  "name": "Pixel to rem converter",
+  "short_name": "px2rem",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "A pixel to rem and rem to pixel converter made using html and vanilla JavaScript.",
+  "author": "abdulaskat@gmail.com",
+  "action": {
+    "default_popup": "pxToRem.html",
+    "default_icon": "images/icon-128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["pxToRem.js"]
+    }
+  ],
+  "icons": {
+    "128": "images/icon-128.png",
+    "192": "images/icon-192.png",
+    "256": "images/icon-256.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ]
+}
