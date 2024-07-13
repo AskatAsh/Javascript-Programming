@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows resize event</title>
+    <style>
+        .color-lightgray{
+            background-color: lightgray;
+        }
+        .color-lightblue {
+            background-color: lightblue;
+        }
+        .color-lightpink {
+            background-color: lightpink;
+        }
+    </style>
+
+</head>
+
+<body class="color-lightgray">
+    <h1 id="viewport-width"></h1>
+
+    <script>
+
+        function getViewportWidth() {
+            const viewportWidth = window.innerWidth;
+
+            document.getElementById('viewport-width').textContent = `Viewport Width: ${viewportWidth}`;
+            const body = document.querySelector('body');
+
+            if(viewportWidth < 576){
+                body.className = '';
+                body.classList.add('color-lightblue');
+            }
+            else if(viewportWidth < 768){
+                body.className = '';
+                body.classList.add('color-lightpink');
+            }
+            else{
+                body.className = '';
+                body.classList.add('color-lightgray');
+            }
+        }
+
+        // initial call
+        getViewportWidth();
+        window.addEventListener('resize', getViewportWidth);
+    </script>
+</body>
+
+</html>
