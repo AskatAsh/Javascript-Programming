@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#section-container{
+    max-width: 1440px;
+    width: 100%;
+    margin-inline: auto;
+}
+#navbar{
+    background-color: rgba(16, 144, 216, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.25rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+#navbar .logo strong{
+    font-weight: 900;
+    color: rgba(17, 17, 17, 0.8);
+    font-size: 3rem;
+}
+#navbar .logo span{
+    letter-spacing: 0.5rem;
+    color: rgba(17, 17, 17, 0.6);
+    font-size: 2rem;
+}
+#navbar button{
+    background-color: rgba(16, 144, 216, 1);
+    border: 0;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    padding: 0.875rem 2.25rem;
+    color: white;
+    font-weight: bold;
+}
