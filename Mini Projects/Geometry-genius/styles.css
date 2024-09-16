@@ -10,6 +10,8 @@
     width: 100%;
     margin-inline: auto;
 }
+
+/* navigation */
 #navbar{
     background-color: rgba(16, 144, 216, 0.1);
     border-radius: 0.5rem;
@@ -17,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    margin-block: 2rem;
 }
 #navbar .logo strong{
     font-weight: 900;
@@ -37,4 +39,62 @@
     padding: 0.875rem 2.25rem;
     color: white;
     font-weight: bold;
+}
+
+/* geometry cards */
+.geometry-cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.geometry-cards .card{
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 0.8rem;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    color: #414141;
+}
+.card .image-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+.card p{
+    margin-block: 1rem 1.5rem;
+}
+.card form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+form .input-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+form .input-container label input{
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    width: 6rem;
+    background-color: #f1f1f1;
+    margin-right: 4px;
+    font-size: 1rem;
+}
+form .input-container label input::placeholder{
+    color: #414141;
+}
+form button{
+    background-color: rgba(16, 144, 216, 1);
+    border: 0;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 1rem;
 }
