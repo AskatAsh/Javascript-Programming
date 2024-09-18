@@ -49,6 +49,7 @@ body{
 .geometry-cards{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 .geometry-cards .card{
     border: 1px solid rgba(17, 17, 17, 0.1);
@@ -79,13 +80,18 @@ body{
 form .input-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
+}
+form .input-container label{
+    display: flex;
+    align-items: center;
 }
 form .input-container label input{
     border: none;
     border-radius: 4px;
     padding: 6px 12px;
-    width: 6rem;
+    width: 5rem;
     background-color: #f1f1f1;
     margin-right: 4px;
     font-size: 1rem;
