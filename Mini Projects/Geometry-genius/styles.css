@@ -22,6 +22,9 @@ body{
 button, .button{
     cursor: pointer;
 }
+button:disabled{
+    background-color: lightgray;
+}
 
 /* navigation */
 #navbar{
