@@ -24,6 +24,8 @@ function input_validation() {
 function convert_to_meter(area) {
   return area / 100;
 }
+
+let click_count = 0;
 calculate_button.addEventListener("click", (e) => {
   e.preventDefault();
   const b = +triangle_base_input.value;
@@ -31,13 +33,24 @@ calculate_button.addEventListener("click", (e) => {
   let area;
   if (input_validation()) {
     area = triangle_area(b, h);
-    const li = document.createElement("li");
-    li.innerHTML = `
+
+    if (click_count == 0) {
+      const li = document.createElement("li");
+      li.innerHTML = `
     <span class="list-item">
-        <span>Triangle</span> <span class="square ans">${area}cm</span> <span class="button square toMeter">Convert to m</span>
+        <span class="shape">Triangle</span> <span class="square ans">${area}cm</span> <span class="button square toMeter">Convert to m</span>
     </span>`;
-    results_list.appendChild(li);
+      results_list.appendChild(li);
+    } else {
+      const shape_name = results_list.querySelector(".shape");
+      if (shape_name.innerText === "Triangle") {
+        // results_list.querySelector(".ans").innerText = `${area}cm`;
+        shape_name.parentElement.innerHTML = `
+        <span class="shape">Triangle</span> <span class="square ans">${area}cm</span> <span class="button square toMeter">Convert to m</span>`;
+      }
+    }
   }
+  click_count++;
   //   calculate_button.setAttribute("disabled", "");
 
   // convert cm to meter and add to result
